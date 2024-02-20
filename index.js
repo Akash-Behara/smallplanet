@@ -25,12 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
         worldHeight = 700
     }   
     
-    fetch('https://github.com/Akash-Behara/smallplanet/blob/master/assets/ne_110m_admin_0_countries.geojson', {
+    fetch('https://github.com/Akash-Behara/smallplanet/ne_110m_admin_0_countries.geojson', {
         method: 'GET',
         headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-            'Access-Control-Allow-Origin': '*'
+            mode: 'no-cors',
         }
     }).then(res => res.json()).then(countries =>
     {
