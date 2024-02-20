@@ -25,7 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
         worldHeight = 700
     }   
     
-    fetch('https://github.com/Akash-Behara/smallplanet/blob/master/assets/ne_110m_admin_0_countries.geojson').then(res => res.json()).then(countries =>
+    fetch('https://github.com/Akash-Behara/smallplanet/blob/master/assets/ne_110m_admin_0_countries.geojson', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+        }
+    }).then(res => res.json()).then(countries =>
     {
     const world = Globe()
         .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-dark.jpg')
