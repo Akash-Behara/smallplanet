@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     AOS.init();
     const N = 10;
@@ -23,10 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
         worldWidth = 1000
         worldHeight = 700
     }   
-
-   
-
-    fetch('../assets/ne_110m_admin_0_countries.geojson').then(res => res.json()).then(countries =>
+    
+    fetch('https://github.com/Akash-Behara/smallplanet/blob/master/assets/ne_110m_admin_0_countries.geojson').then(res => res.json()).then(countries =>
     {
     const world = Globe()
         .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-dark.jpg')
@@ -64,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 world.height([700])
             }    
         })
-    });
+    }).catch((err) => console.log('err', err));
 
    
 
