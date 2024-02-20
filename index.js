@@ -23,18 +23,17 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         worldWidth = 1000
         worldHeight = 700
-    }   
+    }
     
-    fetch('https://github.com/Akash-Behara/smallplanet/ne_110m_admin_0_countries.geojson', {
-        method: 'GET',
-        headers: {
-            mode: 'no-cors',
-        }
-    }).then(res => res.json()).then(countries =>
-    {
+    // fetch('https://github.com/Akash-Behara/smallplanet/ne_110m_admin_0_countries.geojson', {
+    //     headers: {
+    //         mode: 'no-cors',
+    //     }
+    // }).then(res => res.json()).then(countries =>
+    // {
     const world = Globe()
         .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-dark.jpg')
-        .hexPolygonsData(countries.features)
+        // .hexPolygonsData(countries.features)
         .hexPolygonResolution(3)
         .hexPolygonMargin(0.7)
         .hexPolygonUseDots(true)
@@ -68,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 world.height([700])
             }    
         })
-    }).catch((err) => console.log('err', err));
+    // }).catch((err) => console.log('err', err));
 
    
 
