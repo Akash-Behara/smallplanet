@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch('../assets/ne_110m_admin_0_countries.geojson').then(res => res.json()).then(countries =>
     {
     const world = Globe()
-        .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
+        .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-dark.jpg')
         .hexPolygonsData(countries.features)
         .hexPolygonResolution(3)
         .hexPolygonMargin(0.7)
@@ -70,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', () => {
         const g = document.getElementById('globe')
-        console.log('w', window.scrollY)
         if(window.scrollY < 780){
             g.style.transform = `translateX(-${window.scrollY}px)`
         }
