@@ -146,6 +146,8 @@ body {
     .Hero__Content__Container_Digital{
         min-height: 700px;
         max-height: 700px !important;
+        padding: 10px 20px;
+        z-index: 9;
     }
     .Hero__Content__Container_Digital p{
         font-size: 14px;
@@ -160,6 +162,7 @@ body {
     .Hero__Content__Container_Method{
         min-height: 700px;
         max-height: 700px !important;
+        padding: 10px 20px;
     }
     .Hero__Content__Container_Method h1{
         font-size: 30px;

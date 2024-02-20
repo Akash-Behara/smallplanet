@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // }).then(res => res.json()).then(countries =>
     // {
     const world = Globe()
-        .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-dark.jpg')
+        .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
         // .hexPolygonsData(countries.features)
         .hexPolygonResolution(3)
         .hexPolygonMargin(0.7)
