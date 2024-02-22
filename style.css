@@ -11,7 +11,7 @@ body {
     min-height: 100vh;
     font-family: "Roboto Mono", monospace;
     color: white;
-    background: radial-gradient(ellipse farthest-side at top center, #0b1582d5 0%, #000000 50%);
+    background: radial-gradient(ellipse farthest-side at top center, #0b1582d5 0%, #000000 10%);
 }
 
 .navbar{
@@ -149,6 +149,9 @@ body {
     /* min-height: 100vh; */
 }
 
+.Process__Img{
+    width: 650;
+}
 
 .Process__Txt__Container h3{
     font-size: 24px;
@@ -158,6 +161,73 @@ body {
 .Process__Txt__Container p{
     font-size: 14px;
     font-weight: 800;
+}
+.Img_Container p{
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.Process__2__Heading{
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+.Process__2__Card__Container{
+    display: flex;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.Process__2__Card{
+    width: 300px;
+    height: 280px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    --shadowColor: 187 60% 40%;
+	/* display: flex;
+	flex-wrap: wrap; */
+	background: hsl(187 70% 85%);
+	box-shadow: 0.55rem 0.55rem 0 hsl(var(--shadowColor) / 1);
+	border-radius: 0.8rem;
+	overflow: hidden;
+	border: 0.5rem solid;
+    color: black;
+}
+.circle{
+    width: 5px;
+    height: 5px;
+    color: hsl(var(--shadowColor));
+}
+.Process__2__Card h2{
+    font-size: 20px;
+    font-weight: 800;
+}
+.Process__Card__Content{
+    margin-top: 20px;
+}
+.Process__Card__Content ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.Process__Card__Content ul li{
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.Process__3__subHeading{
+    font-size: 14px;
+}
+.Process__3__Img__Container h2{
+    font-size: 20px;
+}
+.Process__3__Img{
+    width: 600px;
+    height: 400px;
 }
 
 @media screen and (min-width: 766px) and (max-width: 1000px) {
@@ -180,6 +250,30 @@ body {
         z-index: 9;
         font-size: 14px;
     }
+    .Process__Content__Container{
+        flex-direction: column;
+    }
+    .Process__Img{
+        width: 100%;
+        height: 350px;
+    }
+    .Process__Txt__Container{
+        font-size: 14px;
+    }
+    .Process__2__Card{
+        height: 250px;
+    }
+    .Process__3__Img{
+        width: 450px;
+        height: 250px;
+    }
+    .Process__6__Txt{
+        font-size: 14px;
+    }
+    .pin-spacer{
+        height: 4360px !important;
+    }
+    
 }
 
 @media only screen and  (max-width: 500px) {
@@ -227,6 +321,74 @@ body {
         font-size: 10px;
         padding: 7px 10px;
         width: 150px;
+    }
+    .Process__Img{
+        width: 250px;
+    }
+    .Process__Content__Container{
+        flex-direction: column;
+    }
+    .Process__2__Card__Container{
+        transform: translateX(-15px);
+    }
+    .Process__Txt__Container h3{
+        font-size: 14px;
+    }
+    .Process__Txt__Container p{
+        font-size: 10px;
+    }
+    .Process__2__Heading{
+        font-size: 18px;
+    }
+    .Process__2__Card{
+        width: 160px;
+        height: 185px;
+    }
+    .Process__2__Card h2{
+        font-size: 12px;
+        margin: 0;
+    }
+    .Process__2__Card ul li {
+        font-size: 9px;
+        margin-top: 6px;
+    }
+    .Process__Card__Content{
+        margin: 0;
+    }
+    .Process__3__Heading{
+        font-size: 10px;
+    }
+    .Process__3__Img{
+        width: 280px;
+        height: 150px;
+    }
+    .Process__3__subHeading{
+        font-size: 10px;
+    }
+    .Process__3__Img__Container h2{
+        font-size: 14px;
+    }
+    .Process__5__Heading{
+        font-size: 14px;
+    }
+    .Process__5__Content{
+        font-size: 10px;
+    }
+    .Process__5__List{
+        font-size: 9px;
+        margin: 0;
+    }
+    .Process__5__Img__Txt{
+        font-size: 8px;
+    }
+    .Process__6__Txt{
+        font-size: 8px;
+    }
+    .Process__7__Txt{
+        font-size: 9px;
+    }
+    .pin-spacer{
+        height: 4360px !important;
     }
 }
 
