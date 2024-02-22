@@ -30,6 +30,7 @@ body {
 
 .Hero__Container{
     position: relative;
+    overflow: hidden;
 }
 
 .Hero__Content__Container_Digital{
@@ -39,6 +40,7 @@ body {
     align-items: start;
     flex-direction: column;
     padding: 10px 40px;
+    overflow: hidden;
 }
 .Hero__Content__Container_Digital p{
     font-size: 20px;
@@ -64,6 +66,7 @@ body {
     align-items: end;
     flex-direction: column;
     padding: 10px 40px;
+    overflow: hidden;
 }
 .Hero__Content__Container_Method h1{
     font-size: 58px;
@@ -78,7 +81,7 @@ body {
 }
 
 .Globe__Container{
-    position: fixed;
+    position: absolute;
     top: 10;
     right: 0;
     transform: translateX(100px);
@@ -118,6 +121,43 @@ body {
     backdrop-filter: blur( 12px );
     -webkit-backdrop-filter: blur( 14px );
     border: 2px solid rgb(80, 199, 246);
+}
+
+
+.pin-spacer{
+    height: calc(500vh + 700px) !important;
+    padding: 0 !important;
+    /* margin: 0 !important; */
+    /* max-width: 95vw !important; */
+    margin-top: 85px !important;
+}
+.container {
+    overscroll-behavior: none;
+    min-width: calc(100vw - 8px);
+    /* height: 100vh !important; */
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    margin: 0;
+    /* background: lightblue; */
+    max-width: calc(100% - 300px) !important;
+    /* padding-top: 90px !important; */
+}
+
+.Process {
+    min-width: 100vw !important;
+    /* min-height: 100vh; */
+}
+
+
+.Process__Txt__Container h3{
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.Process__Txt__Container p{
+    font-size: 14px;
+    font-weight: 800;
 }
 
 @media screen and (min-width: 766px) and (max-width: 1000px) {

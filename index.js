@@ -69,12 +69,38 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     // }).catch((err) => console.log('err', err));
 
+   const slider = document.querySelector('.Process__Wrapper');
+//    const sections = gsap.utils.toArray(".Process__Wrapper section");
+
+   gsap.registerPlugin(ScrollTrigger);
+
+   let sections = gsap.utils.toArray(".Process");
    
+   gsap.to(sections, {
+     xPercent: -100 * (sections.length - 1),
+     ease: "none",
+     scrollTrigger: {
+       trigger: ".container",
+       pin: true,
+       scrub: 1,
+       snap: 1 / (sections.length - 1),
+       // base vertical scrolling on how wide the container is so it feels more natural.
+       end: "+=3700",
+     }
+   });
 
     window.addEventListener('scroll', () => {
+        console.log('scrol')
         const g = document.getElementById('globe')
         if(window.scrollY < 780){
-            g.style.transform = `translateX(-${window.scrollY}px)`
+            // g.style.transform = `translateX(-${window.scrollY}px)`
+            g.style.transform = `translate(-${window.scrollY}px, ${window.scrollY}px)`
         }
     })
+
+    
+    // window.addEventListener('scroll', (e) => {
+    //     console.log('ee', e.target.scrollTop)
+    //     document.getElementById('Process__Container').style.transform =  `translate3d(-${e.target.scrollTop}px, ${e.target.scrollTop}px, 0)`  
+    // })
 })
