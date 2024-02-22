@@ -69,11 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     // }).catch((err) => console.log('err', err));
 
-   const slider = document.querySelector('.Process__Wrapper');
-//    const sections = gsap.utils.toArray(".Process__Wrapper section");
-
    gsap.registerPlugin(ScrollTrigger);
-
    let sections = gsap.utils.toArray(".Process");
    
    gsap.to(sections, {
@@ -94,13 +90,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const g = document.getElementById('globe')
         if(window.scrollY < 780){
             // g.style.transform = `translateX(-${window.scrollY}px)`
+            window.innerWidth < 1005 ? g.style.transform = `translate(calc(-${window.scrollY}px + 100px), ${window.scrollY}px)` :
             g.style.transform = `translate(-${window.scrollY}px, ${window.scrollY}px)`
         }
     })
 
-    
-    // window.addEventListener('scroll', (e) => {
-    //     console.log('ee', e.target.scrollTop)
-    //     document.getElementById('Process__Container').style.transform =  `translate3d(-${e.target.scrollTop}px, ${e.target.scrollTop}px, 0)`  
-    // })
 })

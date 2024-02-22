@@ -243,7 +243,7 @@ body {
         transform: translateY(-80px);
     }
     .Globe__Container{
-        top: 35%;
+        top: 20%;
         transform: translateX(120px);
     }
     .Hero__Content__Container_Method p {
@@ -306,7 +306,7 @@ body {
         text-align: end;
     }
     .Globe__Container{
-        transform: translateX(600px);
+        transform: translateX(574px);
     }
     .Cards__Container{
         display: flex;
