@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
             trigger: ".SD",
             toggleActions: "restart complete reverse resume",
             start: "top top",
-            // markers: true,
+            markers: true,
             scrub: true,
             pin: true
         }

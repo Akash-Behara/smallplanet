@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth !important;
+}
+
 body {
     min-height: 100vh;
     font-family: "Roboto Mono", monospace;
@@ -30,6 +34,30 @@ body {
     margin-top: 80px !important;
 }
 
+.Section__Heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.Section__Heading__line{
+    background: #000;
+    width: 100%;
+    position: relative;
+    height: 2px;
+    border-radius: 8px;
+    box-shadow: 0 18px 32px 5px rgba(47, 55, 164, 0.37);
+}
+.Section__Heading h2 {
+    background: white;
+    padding: 0 10px;
+    font-weight: 800;
+    font-size: 40px;
+}
+.Section__Heading{
+    padding-top: 60px !important;
+}
+
 .Hero__Container{
     position: relative;
     overflow: hidden;
@@ -49,12 +77,28 @@ body {
     font-weight: 700;
     margin: 0;
 }
-.Hero__Content__Container_Digital h1{
+/* .Hero__Content__Container_Digital h1{
     font-size: 54px;
     font-weight: 900;
     letter-spacing: 2px;
     margin: 0;
+} */
+.Hero__Content__Container_Digital h1 {
+    font-size: 54px;
+    font-weight: 900;
+    background: linear-gradient(to right, #121FCF 60%, rgb(0, 207, 206) 40%);
+    text-shadow:
+    0px 0px 0 rgba(255, 255, 255, 0.2),
+        -0px 1px 0 rgba(0, 76, 207, 0.6),
+        -1px 2px 0 rgb(-6,0,178),
+        -2px 3px  0 rgb(-31,-25,153),
+        -3px 4px 3px rgba(0,0,0,0.18),
+        -3px 3px 1px rgba(0,0,0,0.5),
+        0px 0px 3px rgba(0,0,0,.2);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;      
 }
+
 .Hero__Content__Container_Digital h3{
     font-size: 20px;
     font-weight: 900;
@@ -110,11 +154,11 @@ body {
 }
 .We__Diff__Txt_anim h2:nth-child(1) {
     color: transparent;
-    -webkit-text-stroke: 2px #03a9f4;
-    -moz-text-stroke: 2px #03a9f4;
+    -webkit-text-stroke: 2px #0373f4;
+    -moz-text-stroke: 2px #0373f4;
 }
 .We__Diff__Txt_anim h2:nth-child(2) {
-    color: #03a9f4;
+    color: #0373f4;
     animation: animate 3s ease-in-out infinite;
 }
 @keyframes animate {
@@ -172,7 +216,7 @@ body {
     margin-left: 35px;
 }
 .Card{
-    background: rgb(92, 92, 92);
+    background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
     box-shadow: 0 8px 32px 0 rgba(47, 55, 164, 0.37);
     backdrop-filter: blur( 12px );
     -webkit-backdrop-filter: blur( 12px );
@@ -185,11 +229,31 @@ body {
     color: white;
 }
 .Card:hover{
-    background: rgba(70, 70, 70, 0.227);
+    background: linear-gradient(109.6deg, rgba(33, 33, 33, 0.93) 11.2%, rgb(84, 82, 82) 78.9%);
     box-shadow: 0 8px 32px 0 rgba(47, 55, 164, 0.37);
     backdrop-filter: blur( 12px );
     -webkit-backdrop-filter: blur( 14px );
     border: 2px solid rgb(80, 199, 246);
+}
+
+.Hero__Content__Container_Method h1{
+    font-size: 54px;
+    font-weight: 900;
+    background: linear-gradient(to right, #121FCF 60%, rgb(0, 207, 206) 40%);
+    text-shadow:
+    0px 0px 0 rgba(255, 255, 255, 0.2),
+        -0px 1px 0 rgba(0, 76, 207, 0.6),
+        -1px 2px 0 rgb(-6,0,178),
+        -2px 3px  0 rgb(-31,-25,153),
+        -3px 4px 3px rgba(0,0,0,0.18),
+        -3px 3px 1px rgba(0,0,0,0.5),
+        0px 0px 3px rgba(0,0,0,.2);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;  
+}
+.Hero__Content__Container_Method p{
+    font-weight: 700;
+    font-size: 14px;
 }
 
 .About__Us__Heading h2{
@@ -256,11 +320,14 @@ body {
     font-size: 42px;
     font-weight: 800;
     text-align: center;
-    margin-bottom: 8px;
     position: absolute;
-    top: 55px;
+    top: 58px;
     left: 50%;
     transform: translate(-50%, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 /* .pin-spacer{
     height: calc(500vh + 700px) !important;
@@ -277,7 +344,7 @@ body {
     margin: 0;
     /* background: lightblue; */
     max-width: calc(100% - 300px) !important;
-    padding-top: 90px !important;
+    padding-top: 110px !important;
     position: relative;
 }
 
@@ -480,10 +547,24 @@ body {
     /* .pin-spacer{
         height: 4360px !important;
     } */
+    .Section__Heading h2 {
+        font-weight: 800;
+        font-size: 28px;
+    }
+    .Section__Heading{
+        padding-top: 0;
+    }
     
 }
 
 @media only screen and  (max-width: 500px) {
+    .Section__Heading{
+        padding-top: 0;
+    }
+    .Section__Heading h2 {
+        font-weight: 800;
+        font-size: 22px;
+    }
     .Hero__Content__Container_Digital{
         min-height: 700px;
         max-height: 700px !important;
