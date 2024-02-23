@@ -22,12 +22,24 @@ body {
 
 .navbar{
     height: 80px !important;
-    position: fixed;
+    position: fixed !important;
     top: 0;
     z-index: 99;
     padding: 10px 40px;
     backdrop-filter: blur( 12px );
     -webkit-backdrop-filter: blur( 12px );
+}
+
+.Nav__Logo{
+    height: 70px;
+}
+
+.nav-link{
+    color: #000;
+}
+.nav-link:hover{
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .Main__Container{
@@ -366,6 +378,9 @@ body {
     font-size: 14px;
     font-weight: 800;
 }
+.Process__1__Last__Txt{
+    font-size: 14px;
+}
 .Img_Container p{
     font-size: 14px;
     font-weight: 700;
@@ -537,6 +552,9 @@ body {
     }
     .Process__2__Card{
         height: 250px;
+    }
+    .Process__1__Last__Txt{
+        font-size: 13px;
     }
     .Process__3__Img{
         width: 450px;
@@ -733,6 +751,9 @@ body {
     }
     .Process__6__Txt{
         font-size: 8px;
+    }
+    .Process__1__Last__Txt{
+        font-size: 10px;
     }
     .Process__7__Txt{
         font-size: 9px;

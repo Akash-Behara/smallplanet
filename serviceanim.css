@@ -40,11 +40,6 @@
   padding: 0px 5px;
 }
 
-.material-symbols-outlined{
-  /* width: 10px; */
-  /* height: 10px; */
-  /* background: #000; */
-}
 
 .services_img_1_move{
   animation: icons-animation 1000ms alternate infinite ease-in-out;
@@ -399,8 +394,8 @@ label { margin-right: 10px; }
 
 @media screen and (max-width: 500px) {
   :root{
-    --cubesize: 300px;
-    --cubesizetranslate: 150px;
+    --cubesize: 280px;
+    --cubesizetranslate: 140px;
   }
   .services_img__container img{
     height: 60px;
@@ -417,4 +412,7 @@ label { margin-right: 10px; }
   .scene3{
     margin: 30px 20px;
   } 
+  .Services__Content__Container ul li{
+    font-size: 8px;
+  }
 }
