@@ -205,7 +205,6 @@ body {
 .SD__Container p {
     font-weight: 800;
 }
-
 .SD__Txt{
     position: relative;
     height: 300px;
@@ -251,7 +250,6 @@ body {
     transform: translateY(-50%);
     border-radius: 8px;
 }
-
 
 
 .Methodology__Heading{
@@ -551,6 +549,12 @@ body {
     }
     .SD__Bene p{
         font-size: 12px !important;
+    }
+    .p-one{
+       width: 320px !important;
+    }
+    .p-two{
+        width: 320px !important;
     }
     .p-one p{
         font-size: 18px;
