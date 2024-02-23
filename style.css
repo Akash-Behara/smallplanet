@@ -367,6 +367,15 @@ body {
     height: 400px;
 }
 
+.Achieve__Heading{
+    font-size: 48px;
+    font-weight: 800;
+}
+.Achieve__Img__Container img{
+    width: 600px;
+    border-radius: 8px;
+}
+
 @media screen and (min-width: 766px) and (max-width: 1000px) {
     .Hero__Content__Container_Digital{
         height: 100%;
@@ -464,6 +473,9 @@ body {
     }
     .Process__6__Txt{
         font-size: 14px;
+    }
+    .Achieve__Img__Container img{
+        width: 400px;
     }
     /* .pin-spacer{
         height: 4360px !important;
@@ -639,6 +651,13 @@ body {
     }
     .Process__7__Txt{
         font-size: 9px;
+    }
+    .Achieve__Img__Container img{
+        width: 300px;
+        border-radius: 8px;
+    }
+    .Acheive__Txt{
+        font-size: 14px;
     }
     /* .pin-spacer{
         height: 4360px !important;
