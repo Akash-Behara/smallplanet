@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         startLng: (Math.random() - 0.5) * 360,
         endLat: (Math.random() - 0.5) * 180,
         endLng: (Math.random() - 0.5) * 360,
-        color: [['red', 'white', 'blue', 'green'][Math.round(Math.random() * 3)], ['red', 'white', 'blue', 'green'][Math.round(Math.random() * 3)]]
+        color: [['red', 'black', 'blue', 'green'][Math.round(Math.random() * 3)], ['red', 'black', 'blue', 'green'][Math.round(Math.random() * 3)]]
     }));
 
     let worldWidth = 0
@@ -70,8 +70,44 @@ document.addEventListener('DOMContentLoaded', () => {
     // }).catch((err) => console.log('err', err));
 
    gsap.registerPlugin(ScrollTrigger);
+
+   //SD SECTION
+   let tl_sd = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".SD",
+            toggleActions: "restart complete reverse resume",
+            start: "top top",
+            markers: true,
+            scrub: true,
+            pin: true
+        }
+   })
+    tl_sd.to(".p-one", {
+        autoAlpha: 0
+    });
+    tl_sd.from(".p-two", {
+        autoAlpha: 0,
+        // y: 20
+    });
+    tl_sd.set(
+        ".img-one",
+        {
+        autoAlpha: 0
+        },
+        "<"
+    );
+    tl_sd.from(
+        ".img-two",
+        {
+        autoAlpha: 0
+        },
+        ">"
+    );
+   //SD SECTION END
+
+
+   //PROCESS
    let sections = gsap.utils.toArray(".Process");
-   
    gsap.to(sections, {
      xPercent: -100 * (sections.length - 1),
      ease: "none",
@@ -84,6 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
        end: "+=3700",
      }
    });
+   // PROCESS END
 
     window.addEventListener('scroll', () => {
         console.log('scrol')
