@@ -388,7 +388,7 @@ body {
 }
 .Process__2__Card{
     width: 300px;
-    height: 280px;
+    height: 260px;
     padding: 8px 12px;
     border-radius: 8px;
     --shadowColor: 187 60% 40%;
@@ -433,6 +433,10 @@ body {
     width: 600px;
     height: 400px;
 }
+.Process__7__SubHeading p{
+    font-weight: 800;
+}
+
 
 .Achieve__Heading{
     font-size: 48px;
