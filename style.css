@@ -765,6 +765,10 @@ body {
     .Acheive__Txt{
         font-size: 14px;
     }
+    .Nav__Logo{
+        height: 55px;
+        /* width: 90px; */
+    }
     /* .pin-spacer{
         height: 4360px !important;
     } */
