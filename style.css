@@ -274,6 +274,14 @@ body {
     font-size: 14px;
 }
 
+.Scroll__Svg{
+    width: 100px;
+    height: 80px;
+    transform: translate(2px, 30px);
+    fill: skyblue !important;
+    color: skyblue !important;
+}
+
 .About__Us__Heading h2{
     font-size: 42px;
     font-weight: 800;
@@ -282,6 +290,82 @@ body {
     width: 600px;
     height: 450px;
 }
+
+.About__Us__Card1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    /* padding: 20px 20px; */
+    height: 230px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px 1px rgba(58, 58, 59, 0.37);
+    background-color: #f5f4fa;
+    font-weight: 500;
+    font-size: 15px;
+    /* border: 1px solid; */
+    /* border-left: 2px solid red; */
+    background: linear-gradient(to bottom, rgb(220, 225, 255) 10%, #ffffff78);
+}
+.About__Us__Card2{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    /* padding: 20px 20px; */
+    height: 230px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px 1px rgba(58, 58, 59, 0.37);
+    background-color: #f5f4fa;
+    font-weight: 500;
+    font-size: 15px;
+    background: linear-gradient(to bottom, rgb(220, 225, 255) 10%, #ffffff78);
+}
+.About__Us__Card__Panel1{
+    padding: 6px 0px;
+    background: linear-gradient(to bottom, #1d30b6 30%, #4a5cd2);
+    backdrop-filter: blur( 12px );
+    -webkit-backdrop-filter: blur( 12px );
+    border-radius: 8px 8px 0 0;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 700;
+    width: 100%;
+}
+.About__Us__Card__Panel2{
+    width: 100%;
+    padding: 6px 0px;
+    background: linear-gradient(to bottom, #1d30b6 50%, #4a5cd2);
+    backdrop-filter: blur( 12px );
+    -webkit-backdrop-filter: blur( 12px );
+    border-radius: 8px 8px 0 0;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.Shield__Img{
+    width: 50px;
+    height: 50px;
+}
+.Panel1{
+    transform: translateX(-40px);
+}
+/* .About__Us__Card__Panel2 > div{
+    width: 60px;
+    height: 60px;
+} */
+.Info__Img__Container{
+    /* transform: translateX(900px); */
+}
+.Info__Img__Container img{
+    width:45px;
+    height:45px;
+}
+
+
 
 
 .SD__Container p {

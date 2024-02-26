@@ -69,19 +69,19 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     // }).catch((err) => console.log('err', err));
 
-   gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
 
-   //SD SECTION
-   let tl_sd = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".SD",
-            toggleActions: "restart complete reverse resume",
-            start: "top top",
-            // markers: true,
-            scrub: true,
-            pin: true
-        }
-   })
+    //SD SECTION
+    let tl_sd = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".SD",
+                toggleActions: "restart complete reverse resume",
+                start: "top top",
+                // markers: true,
+                scrub: true,
+                pin: true
+            }
+    })
     tl_sd.to(".p-one", {
         autoAlpha: 0
     });
@@ -103,7 +103,21 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         ">"
     );
-   //SD SECTION END
+    //SD SECTION END
+
+    // //MOVE INFO IMG TO LEFT
+    // let info__tl = gsap.to('.Info__Img__Container',{
+    //     x: -800,
+    //     scrollTrigger: {
+    //         trigger: ".Info__Img__Container",
+    //         toggleActions: "restart complete reverse resume",
+    //         start: "top center",
+    //         markers: true,
+    //         scrub: true,
+    //     }
+    // })
+ 
+   
 
 
    //PROCESS
@@ -136,15 +150,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const cube1 = document.querySelector('.cube');
     const cube2 = document.querySelector('.cube2');
     const cube3 = document.querySelector('.cube3');
+    const aboutus1 = document.getElementById('About__Us__Main');
     let isVisible = false;
+    let aboutVisible = false
 
     function isElementInViewport(el) {
         const rect = el.getBoundingClientRect();
         return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
         );
     }
     function checkVisibilityAndLog() {
@@ -173,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 cube3.classList.remove('show-back')
             }, 3500)
-        } 
+        }
     }
     checkVisibilityAndLog();
     window.addEventListener('scroll', checkVisibilityAndLog);
