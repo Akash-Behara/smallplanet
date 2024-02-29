@@ -1,6 +1,9 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     AOS.init();
+    $('.js-timeline').Timeline(
+        {}
+    );
     const N = 10;
     const arcsData = [...Array(N).keys()].map(() => ({
         startLat: (Math.random() - 0.5) * 180,
@@ -175,24 +178,95 @@ document.addEventListener('DOMContentLoaded', () => {
             isVisible = false;
         }
 
-        if (isElementInViewport(cube2) && !isVisible) {
-            isVisible = true;
-            cube2.classList.add('show-back')
-            setTimeout(() => {
-                cube2.classList.remove('show-back')
-            }, 3500)
-        }
+        // if (isElementInViewport(cube2) && !isVisible) {
+        //     isVisible = true;
+        //     cube2.classList.add('show-back')
+        //     setTimeout(() => {
+        //         cube2.classList.remove('show-back')
+        //     }, 3500)
+        // }
 
-        if (isElementInViewport(cube3) && !isVisible) {
-            isVisible = true;
-            cube3.classList.add('show-back')
-            setTimeout(() => {
-                cube3.classList.remove('show-back')
-            }, 3500)
-        }
+        // if (isElementInViewport(cube3) && !isVisible) {
+        //     isVisible = true;
+        //     cube3.classList.add('show-back')
+        //     setTimeout(() => {
+        //         cube3.classList.remove('show-back')
+        //     }, 3500)
+        // }
     }
     checkVisibilityAndLog();
     window.addEventListener('scroll', checkVisibilityAndLog);
+
+
+    // CAROUSEL SECTION
+    let arr = [
+        {title: 'title1', description: 'description', image: 'image'},
+        {title: 'title2', description: 'description', image: 'image'},
+        {title: 'title3', description: 'description', image: 'image'},
+        {title: 'title4', description: 'description', image: 'image'},
+        {title: 'title5', description: 'description', image: 'image'},
+        {title: 'title5', description: 'description', image: 'image'},
+        {title: 'title5', description: 'description', image: 'image'},
+        {title: 'title5', description: 'description', image: 'image'},
+    ]
+    let carouselItems = [];
+    let carouselNavItems = [];
+    let currentSlide = '#slide-0';
+    const carouselItem = (item, i) => {
+        return `
+            <div id="slide-${i}" class="carousel__item">
+                <h1>${item.title}</h1>
+                <p>${item.description}</p>
+                <img src=${item.image} alt="">
+            </div>
+        `
+    }
+    const carouselNav = (i) => {
+        return `
+            <a href="#slide-${i}" id="${i}" class="slider-nav-item"></a>
+        `
+    }
+    
+    const carouselContainer = document.getElementById('Slider')
+    const caroudleNavContainer = document.getElementById('slider-nav')
+    for(let i = 0; i < arr.length; i++){
+        carouselItems.push(carouselItem(arr[i], i))
+        carouselNavItems.push(carouselNav(i))
+    }
+    carouselContainer.innerHTML = carouselItems.join('')
+    caroudleNavContainer.innerHTML = carouselNavItems.join('')
+
+    const sliderNavItem = document.querySelectorAll('.slider-nav-item')
+    sliderNavItem.forEach((el) => {
+        el.addEventListener('click', (e) => {
+            currentSlide = e.target.attributes.href.value
+        })
+    })
+    const slidePrevBtn = document.getElementById('sliderPrev')  
+    slidePrevBtn.addEventListener('click', () => {
+        if(currentSlide == '#slide-0'){
+            return
+        }
+        // if(currentSlide == '#slide-1'){
+        //     document.getElementById(0).classList.remove('active')
+        // }
+        let slide  = currentSlide.split('-')[1]
+        currentSlide = `#slide-${parseInt(slide) - 1}`
+        document.getElementById(currentSlide.split('-')[1]).classList.remove('active')
+        slidePrevBtn.href = currentSlide
+    })
+
+    const slideNextBtn = document.getElementById('sliderNext')  
+    slideNextBtn.addEventListener('click', () => {
+        if(currentSlide == `#slide-${arr.length - 1}`){
+            return
+        }
+        let slide  = currentSlide.split('-')[1]
+        currentSlide = `#slide-${parseInt(slide) + 1}`
+        document.getElementById(slide).classList.add('active')
+        slideNextBtn.href = currentSlide
+    })
+
 });
 
 var cube = document.querySelector('.cube');
