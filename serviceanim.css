@@ -120,6 +120,10 @@
   background: transparent;
 }
 
+.cube:hover{
+  transform: translateZ(-100px) rotateY(-180deg) !important;
+}
+
 .cube.show-front  { transform: translateZ(-100px) rotateY(   0deg); }
 .cube.show-right  { transform: translateZ(-100px) rotateY( -90deg); }
 .cube.show-back   { transform: translateZ(-100px) rotateY(-180deg); }
@@ -216,7 +220,9 @@ label { margin-right: 10px; }
   transition: transform 1s;
   background: transparent;
 }
-  
+.cube2:hover{
+  transform: translateZ(-100px) rotateY(-180deg) !important;
+}
 
 .cube2.show-front  { transform: translateZ(-100px) rotateY(   0deg); }
 .cube2.show-right  { transform: translateZ(-100px) rotateY( -90deg); }
@@ -314,6 +320,10 @@ label { margin-right: 10px; }
   transform: translateZ(-100px);
   transition: transform 1s;
   background: transparent;
+}
+
+.cube3:hover{
+  transform: translateZ(-100px) rotateY(-180deg) !important;
 }
   
 

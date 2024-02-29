@@ -311,21 +311,6 @@ function changeSide(e) {
 }
 
 function changeSide2(e) {
-    if(e === 'enter'){
-        var showClass = 'show-back';
-        if ( currentClass2 ) {
-            cube2.classList.remove( currentClass2 );
-        }
-        cube2.classList.add( showClass );
-        currentClass2 = showClass;
-    } if(e === 'leave') {
-        var showClass = 'show-front';
-        if ( currentClass2 ) {
-            cube2.classList.remove( currentClass2 );
-        }
-        cube2.classList.add( showClass );
-        currentClass2 = showClass;
-    }
     if(e === 'click'){
         if ( currentClass2 === 'show-front' ) {
             cube2.classList.remove( currentClass2 );
@@ -380,38 +365,35 @@ function changeSide3(e) {
 // set initial side
 changeSide();
 
-cube.addEventListener( 'mouseenter', () => {
-    changeSide('enter') 
-}
-);
-cube.addEventListener( 'mouseleave', () => {
-    changeSide('leave') 
-}
-);
+// cube.addEventListener( 'mouseenter', () => {
+//     changeSide('enter') 
+// });
+// cube.addEventListener( 'mouseleave', () => {
+//     changeSide('leave') 
+// });
 cube.addEventListener('click', () => {
     changeSide('click')
 })
 
-cube2.addEventListener( 'mouseenter', () => {
-    changeSide2('enter') }
-);
-cube2.addEventListener( 'mouseleave', () => {
-    changeSide2('leave') 
-}
-);
+// cube2.addEventListener( 'mouseenter', () => {
+//     changeSide2('enter') }
+// );
+// cube2.addEventListener( 'mouseleave', () => {
+//     changeSide2('leave') 
+// });
 cube2.addEventListener('click', () => {
     changeSide2('click')
 })
 
 changeSide2()
 
-cube3.addEventListener( 'mouseenter', () => {
-    changeSide3('enter') }
-);
-cube3.addEventListener( 'mouseleave', () => {
-    changeSide3('leave') 
-}
-);
+// cube3.addEventListener( 'mouseenter', () => {
+//     changeSide3('enter') }
+// );
+// cube3.addEventListener( 'mouseleave', () => {
+//     changeSide3('leave') 
+// }
+// );
 cube3.addEventListener('click', () => {
     changeSide3('click')
 })
