@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // }
     }
     checkVisibilityAndLog();
-    window.addEventListener('scroll', checkVisibilityAndLog);
+    // window.addEventListener('scroll', checkVisibilityAndLog);
 
 
     // CAROUSEL SECTION
