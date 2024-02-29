@@ -381,7 +381,8 @@ function changeSide3(e) {
 changeSide();
 
 cube.addEventListener( 'mouseenter', () => {
-    changeSide('enter') }
+    changeSide('enter') 
+}
 );
 cube.addEventListener( 'mouseleave', () => {
     changeSide('leave') 

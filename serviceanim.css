@@ -106,7 +106,7 @@
   height: var(--cubesize);
   /* border: 1px solid #CCC; */
   margin: 80px;
-  perspective: 400px;
+  /* perspective: 400px; */
   /* background: lightgray; */
 }
 
@@ -142,50 +142,51 @@
 .cube__face--front  {
   border: 2px solid var(--cubeBorderColor);
   border-radius: 15px;
-  background: var(--cubefacecolor);
+  /* background: var(--cubefacecolor); */
+  background: #000;
   box-shadow: 0 8px 32px 0px rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 12px );
-  -webkit-backdrop-filter: blur( 12px );
+  /* backdrop-filter: blur( 12px ); */
+  /* -webkit-backdrop-filter: blur( 12px ); */
 }
 .cube__face--right  { 
   border: 2px solid var(--cubeBorderColor);
   border-radius: 15px;
   background: rgba(0, 0, 0, 0.166);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 12px );
-  -webkit-backdrop-filter: blur( 12px );
+  /* backdrop-filter: blur( 12px );
+  -webkit-backdrop-filter: blur( 12px ); */
 }
 .cube__face--back   { 
   border: 2px solid var(--cubeBorderColor);
   border-radius: 15px;
   background: var(--cubefacecolor);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 12px );
-  -webkit-backdrop-filter: blur( 12px );
+  /* backdrop-filter: blur( 12px ); */
+  /* -webkit-backdrop-filter: blur( 12px ); */
 }
 .cube__face--left   { 
   border: 2px solid var(--cubeBorderColor);
   border-radius: 15px;
   background: rgba(0, 0, 0, 0.166);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 12px );
-  -webkit-backdrop-filter: blur( 12px );
+  /* backdrop-filter: blur( 12px ); */
+  /* -webkit-backdrop-filter: blur( 12px ); */
 }
 .cube__face--top    { 
   border: 2px solid var(--cubeBorderColor);
   border-radius: 15px;
   background: rgba(82, 82, 82, 0.166);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 12px );
-  -webkit-backdrop-filter: blur( 12px );
+  /* backdrop-filter: blur( 12px ); */
+  /* -webkit-backdrop-filter: blur( 12px ); */
 }
 .cube__face--bottom { 
   border: 2px solid var(--cubeBorderColor);
   border-radius: 15px;
   background: var(--cubeGroundFaceColor);
   box-shadow: 0 8px 32px 40px rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 12px );
-  -webkit-backdrop-filter: blur( 12px );
+  /* backdrop-filter: blur( 12px ); */
+  /* -webkit-backdrop-filter: blur( 12px ); */
 }
 
 .cube__face--front  { transform: rotateY(  0deg) translateZ(var(--cubesizetranslate)); }
@@ -241,50 +242,51 @@ label { margin-right: 10px; }
 .cube__face2--front  {
   border: 2px solid var(--cubeBorderColor);
   border-radius: 15px;
-  background: var(--cubefacecolor);
+  /* background: var(--cubefacecolor); */
+  background: #000;
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 12px );
-  -webkit-backdrop-filter: blur( 12px );
+  /* backdrop-filter: blur( 12px ); */
+  /* -webkit-backdrop-filter: blur( 12px ); */
 }
 .cube__face2--right  { 
   border: 2px solid var(--cubeBorderColor);
   border-radius: 15px;
   background: rgba(0, 0, 0, 0.166);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 12px );
-  -webkit-backdrop-filter: blur( 12px );
+  /* backdrop-filter: blur( 12px ); */
+  /* -webkit-backdrop-filter: blur( 12px ); */
 }
 .cube__face2--back   { 
   border: 2px solid var(--cubeBorderColor);
   border-radius: 15px;
   background: var(--cubefacecolor);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 12px );
-  -webkit-backdrop-filter: blur( 12px );
+  /* backdrop-filter: blur( 12px ); */
+  /* -webkit-backdrop-filter: blur( 12px ); */
 }
 .cube__face2--left   { 
   border: 2px solid var(--cubeBorderColor);
   border-radius: 15px;
   background: rgba(0, 0, 0, 0.166);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 12px );
-  -webkit-backdrop-filter: blur( 12px );
+  /* backdrop-filter: blur( 12px ); */
+  /* -webkit-backdrop-filter: blur( 12px ); */
 }
 .cube__face2--top    { 
   border: 2px solid var(--cubeBorderColor);
   border-radius: 15px;
   background: rgba(0, 0, 0, 0.166);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 12px );
-  -webkit-backdrop-filter: blur( 12px );
+  /* backdrop-filter: blur( 12px ); */
+  /* -webkit-backdrop-filter: blur( 12px ); */
 }
 .cube__face2--bottom { 
   border: 2px solid var(--cubeBorderColor);
   border-radius: 15px;
   background: var(--cubeGroundFaceColor);
   box-shadow: 0 8px 32px 40px rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 12px );
-  -webkit-backdrop-filter: blur( 12px );
+  /* backdrop-filter: blur( 12px ); */
+  /* -webkit-backdrop-filter: blur( 12px ); */
 }
 
 .cube__face2--front  { transform: rotateY(  0deg) translateZ(var(--cubesizetranslate)); }
@@ -341,48 +343,48 @@ label { margin-right: 10px; }
   border-radius: 15px;
   background: var(--cubefacecolor);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 12px );
-  -webkit-backdrop-filter: blur( 12px );
+  /* backdrop-filter: blur( 12px ); */
+  /* -webkit-backdrop-filter: blur( 12px ); */
 }
 .cube__face3--right  { 
   border: 2px solid var(--cubeBorderColor);
   border-radius: 15px;
   background: rgba(0, 0, 0, 0.166);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 12px );
-  -webkit-backdrop-filter: blur( 12px );
+  /* backdrop-filter: blur( 12px ); */
+  /* -webkit-backdrop-filter: blur( 12px ); */
 }
 .cube__face3--back   { 
   border: 2px solid var(--cubeBorderColor);
   border-radius: 15px;
   background: var(--cubefacecolor);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 12px );
-  -webkit-backdrop-filter: blur( 12px );
+  /* backdrop-filter: blur( 12px ); */
+  /* -webkit-backdrop-filter: blur( 12px ); */
 }
 .cube__face3--left   { 
   border: 2px solid var(--cubeBorderColor);
   border-radius: 15px;
   background: rgba(3, 3, 3, 0.166);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 12px );
-  -webkit-backdrop-filter: blur( 12px );
+  /* backdrop-filter: blur( 12px ); */
+  /* -webkit-backdrop-filter: blur( 12px ); */
 }
 .cube__face3--top    { 
   border: 2px solid var(--cubeBorderColor);
   border-radius: 15px;
   background: rgba(82, 82, 82, 0.166);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 12px );
-  -webkit-backdrop-filter: blur( 12px );
+  /* backdrop-filter: blur( 12px ); */
+  /* -webkit-backdrop-filter: blur( 12px ); */
 }
 .cube__face3--bottom { 
   border: 2px solid var(--cubeBorderColor);
   border-radius: 15px;
   background: var(--cubeGroundFaceColor);
   box-shadow: 0 8px 32px 40px rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 12px );
-  -webkit-backdrop-filter: blur( 12px );
+  /* backdrop-filter: blur( 12px ); */
+  /* -webkit-backdrop-filter: blur( 12px ); */
 }
 
 .cube__face3--front  { transform: rotateY(  0deg) translateZ(var(--cubesizetranslate)); }
