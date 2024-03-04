@@ -447,8 +447,87 @@ body {
 
 
 
-
-
+.SD__Main__Container{
+    height: 100vh;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.SD__Section__Heading{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    width: 100%;
+}
+.SD__Section__Heading h2{
+    font-size: 42px;
+    font-weight: 800;
+}
+.Tabs__Txt{
+    font-weight: 800;
+}
+.nav-tabs {
+    border-bottom: 2px solid #f5f5f5;
+}
+.nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #fff;
+    border-color: #606161 #c9c9c9 #fff;
+}
+.SD__Section__Heading p{
+    max-width: 900px;
+}
+.SD__Feat__Container{
+    display: flex;
+}
+.SD__Feat__Container__Left{
+    max-width: 50%;
+}
+.SD__Content__Img{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+.SD__Content__Img img{
+    width: 550px;
+    height: 400px;
+}
+.SD__Feat__Heading h2 {
+    font-size: 17px;
+    font-weight: 600;
+}
+.SD__Key__Txt{
+    font-size: 22px;
+    font-weight: 700;
+}
+.SD__Feat__sub{
+    font-size: 13px; 
+ }
+.SD__Bene__Container{
+    display: flex;
+}
+.SD__Bene__Img__Container img{
+    width: 550px;
+    height: 400px;
+}
+.SD__Bene h2{
+    font-size: 17px;
+    font-weight: 600;
+}
+.SD__Bene p{
+    font-size: 13px; 
+}
+.SD__Bene__Content__Container{
+    /* max-width: 70%; */
+    width: 100%;
+}
+.SD__Bene__Img__Container{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
 
 
 
@@ -471,18 +550,7 @@ body {
     font-size: 42px;
     font-weight: 800;
 }
-.SD__Feat__Heading h2 {
-    font-size: 18px;
-    font-weight: 800;
-}
 
-.SD__Bene h2{
-    font-size: 18px;
-    font-weight: 900;
-}
-.SD__Bene p{
-    font-size: 16px;
-}
 .p-one p{
     font-size: 18px;
     font-weight: 800;
@@ -703,6 +771,25 @@ body {
     .About_us__Txt__Container p{
         font-size: 14px !important;
     }
+
+
+    .SD__Content__Img{
+        width: 80%;
+    }
+    .SD__Content__Img img{
+        width: 300px;
+        height: 300px;
+        transform: translateY(40px);
+    }
+    .SD__Bene__Img__Container img{
+        width: 300px;
+        height: 300px;
+        transform: translateY(40px);
+    }
+
+
+
+
     .SD__Heading h2{
         font-size: 20px;
         font-weight: 800;
@@ -871,6 +958,47 @@ body {
     .About_us__Txt__Container{
         font-size: 12px;
     }
+
+    .SD__Section__Heading p{
+        font-size: 14px;
+    }
+    .SD__Feat__Container{
+        position: relative;
+    }
+    .SD__Feat__Container__Left{
+        width: 100%;
+        max-width: 100%;
+    }
+    .SD__Content__Img{
+        position: absolute;
+        z-index: -1;
+        opacity: 0.05;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+    }
+    .SD__Content__Img img{
+        width: 205px;
+        height: 200px;
+    }
+    .SD__Bene__Container{
+        position: relative;
+    }
+    .SD__Bene__Img__Container{
+        position: absolute;
+        z-index: -1;
+        opacity: 0.05;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+    }
+    .SD__Bene__Img__Container img{
+        width: 205px;
+        height: 200px;
+    }
+
+
+
     .SD__Heading h2{
         font-size: 20px;
         font-weight: 800;
