@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
         {}
     );
     const N = 10;
-    const arcsData = [...Array(N).keys()].map(() => ({
+    // [...Array(N).keys()]
+    const arcsData = ['Hi'].map(() => ({
         startLat: (Math.random() - 0.5) * 180,
         startLng: (Math.random() - 0.5) * 360,
         endLat: (Math.random() - 0.5) * 180,
