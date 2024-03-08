@@ -1681,12 +1681,15 @@ body {
     /* transition: ease-in-out 3s; */
   }
 
-  @media screen and (max-width: 768px) {
+  /* @media screen and (max-width: 768px) {
     .Modal-Content{
         width: 85% !important;
         height: 70% !important;
+        animation: modalAnimEndMobile 0.4s;
     }
-  }
+  } */
+
+
   
   /* The Close Button */
   .close {
@@ -1748,14 +1751,14 @@ body {
         opacity: 0.2;
         width: 35%;
         height: 35%;
-    }
+    } */
 
-    60%{
+    /* 50%{
         opacity: 0.5;
-        height: 45%;
-        width: 45%;
-    }
-    80%{
+        height: 40%;
+        width: 40%;
+    } */
+    /* 80%{
         opacity: 0.5;
         height: 55%;
         width: 55%;
@@ -1795,6 +1798,20 @@ body {
         width: 10%;
         height: 5%;
     }
+    100%{
+        opacity: 0;
+        width: 0;
+        height: 0%;
+    }
+}
+
+@keyframes modalAnimEndMobile{
+    0%{
+        opacity: 1;
+        width: 60%;
+        height: 60%;
+    }
+   
     100%{
         opacity: 0;
         width: 0;
