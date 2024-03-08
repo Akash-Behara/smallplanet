@@ -62,7 +62,7 @@ body {
 .New__Card:hover{
     transition: ease-in-out 0.2s;
     scale: 1.01;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 10px;
 }
 .Card__Content{
     padding: 8px 10px;
