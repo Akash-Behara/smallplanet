@@ -59,6 +59,11 @@ body {
     box-shadow: rgba(0, 0, 0, 0.35) 10px 10px 20px;
     border-radius: 8px;
 }
+.New__Card:hover{
+    transition: ease-in-out 0.2s;
+    scale: 1.01;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 10px 10px;
+}
 .Card__Content{
     padding: 8px 10px;
 }
@@ -1673,8 +1678,8 @@ body {
     border: 1px solid #888;
     animation: modalAnim 0.4s;
     animation-fill-mode: forwards;
-    width: 60%;
-    height: 60%;
+    width: 80%;
+    height: 80%;
     position: absolute;
     border-radius: 8px;
     z-index: 99;
@@ -1683,9 +1688,8 @@ body {
 
   /* @media screen and (max-width: 768px) {
     .Modal-Content{
-        width: 85% !important;
+        width: 300px !important;
         height: 70% !important;
-        animation: modalAnimEndMobile 0.4s;
     }
   } */
 
