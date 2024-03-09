@@ -8,8 +8,8 @@
     --path_cliped_img_2:  polygon(0% 0%, 100% 0%, 0% 10%);
     --moon_size: 100px;
     --nav-sd-border: 2px solid white;
-    --navbar-item-bg-hover: white;
-    --navbar-item-txt-hover: blue;
+    --navbar-item-txt-hover: white;
+    --navbar-item-bg-hover: #121FCF;
 }
 
 *{
@@ -223,16 +223,16 @@ body {
 }
 
 .navbar-nav{
-    background-color: #121FCF;
+    background-color: var(--navbar-item-bg-hover)  !important;
     border-radius: 8px;
     height: 100%;
-    color: white;
+    color: var(--navbar-item-txt-hover);
     padding: 6px 10px;
 }
 
 .navbar-nav .nav-item:hover{
-    background: var(--navbar-item-bg-hover);
-    color: var(--navbar-item-txt-hover) !important;
+    background: var(--navbar-item-txt-hover);
+    color: var(--navbar-item-bg-hover) !important;
     border-radius: 8px;
     padding: 0px 0px;
     
