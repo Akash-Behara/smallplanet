@@ -7,6 +7,7 @@
     --path_cliped_img: polygon(0% 100%, 100% 100%, 100% 0%);
     --path_cliped_img_2:  polygon(0% 0%, 100% 0%, 0% 10%);
     --moon_size: 100px;
+    --nav-sd-border: 2px solid white;
 }
 
 *{
@@ -139,9 +140,6 @@ body {
 
 
 
-
-
-
 .navbar{
     height: 80px !important;
     position: fixed !important;
@@ -151,10 +149,70 @@ body {
     backdrop-filter: blur( 12px );
     -webkit-backdrop-filter: blur( 12px );
 }
-.SD__NavBar a{
-    color: red !important;
-    font-weight: 800;
+
+.SD__a__Container{
+    position: relative;
 }
+.SD_Top_border{
+    border: var(--nav-sd-border);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.SD_Top_border::after{
+    content: '';
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: var(--nav-sd-border);
+    transform: translate(5.5px, -1.5px) rotate(-20deg);
+}
+.SD_Top_border::before{
+    content: '';
+    height: 20px;
+    position: absolute;
+    top: 0;
+    border: var(--nav-sd-border);
+    transform: translate(-5.5px, -1.5px) rotate(20deg);
+}
+.SD_Bottom_border{
+    border: var(--nav-sd-border);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.SD_Bottom_border::after{
+    content: '';
+    height: 22.2px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: var(--nav-sd-border);
+    transform: translate(5.3px, 1.5px) rotate(20deg);
+}
+.SD_Bottom_border::before{
+    content: '';
+    height: 22.2px;
+    position: absolute;
+    bottom: 0;
+    border: var(--nav-sd-border);
+    transform: translate(-5px, 2px) rotate(-20deg);
+}
+.SD__NavBar a{
+    font-weight: 800;
+    margin: 0px 20px;   
+    box-shadow: 0 5px 2px -1px rgba(0, 0, 0, 0.2);
+}
+/* .SD__NavBar:hover{
+    border: none !important;
+} */
+
+
+
+
 
 .Nav__Logo{
     height: 70px;
@@ -167,8 +225,31 @@ body {
 }
 .nav-link:hover{
     cursor: pointer;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
+
+.navbar-nav{
+    background-color: #121FCF;
+    border-radius: 8px;
+    height: 100%;
+    color: white;
+    padding: 6px 10px;
+}
+
+.navbar-nav .nav-item:hover{
+    background: white;
+    color: blue !important;
+    border-radius: 8px;
+    padding: 0px 0px;
+    
+}
+.navbar-nav .nav-item a{
+    color: inherit;
+}
+
+
+
+
 
 .Main__Container{
     margin-top: 80px !important;
