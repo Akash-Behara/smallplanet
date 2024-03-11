@@ -245,6 +245,7 @@ body {
     color: inherit;
 }
 
+
 .Paper__Clip{
     position: absolute;
     top: 10%;
@@ -1334,6 +1335,12 @@ body {
     
     .nav-item{
         border-bottom: 1px solid white;
+    }
+    .nav-item{
+        padding: 8px 0px !important;
+    }
+    .navbar-nav .nav-item:hover .Paper__Clip{
+        top: -10%;
     }
     .nav-item:nth-child(5){
         border-bottom: none;
