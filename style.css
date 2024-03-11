@@ -10,6 +10,8 @@
     --nav-sd-border: 2px solid white;
     --navbar-item-txt-hover: white;
     --navbar-item-bg-hover: #121FCF;
+    --navbar-mobile-navlink-padding: 18px;
+    --navbar-mobile-navlink-margin: 20px;
 }
 
 *{
@@ -241,6 +243,17 @@ body {
     color: inherit;
 }
 
+.Paper__Clip{
+    position: absolute;
+    top: 24%;
+    right: 0;
+    transform: translate(0%, -50%);
+    z-index: 5;
+}
+.Paper__Clip img{
+   width: 65px;
+   height: 50px;
+}
 
 
 
@@ -1111,30 +1124,24 @@ body {
 }
 
 @media screen and (min-width: 766px) and (max-width: 1000px) {
-    .SD__NavBar a{
-        margin: 0;
-    }
     .nav-item a{
-        padding-left: 10px;
+        margin-left: var(--navbar-mobile-navlink-margin);
     }
-    .SD_Top_border{
-        display: none;
+    
+    .nav-item{
+        border-bottom: 1px solid white;
     }
-    .SD_Top_border::after{
-        content: none;
+    .nav-item:nth-child(5){
+        border-bottom: none;
     }
-    .SD_Top_border::before{
-        content: none;
+    .navbar-nav .nav-link{
+        padding-left: var(--navbar-mobile-navlink-padding);
     }
-    .SD_Bottom_border{
-        display: none;
+
+    .SD__NavBar a{
+        box-shadow: none;
     }
-    .SD_Bottom_border::after{
-        content: none;
-    }
-    .SD_Bottom_border::before{
-        content: none;
-    }
+
     .SD__NavBar a{
         box-shadow: none;
     }
@@ -1298,34 +1305,16 @@ body {
     .Section__Heading{
         padding-top: 0;
     }
-    .navbar{
-        background-color: #121FCF;
-    }
+    
     
 }
 
 @media only screen and  (max-width: 500px) {
-    .navbar{
-        /* background-color: #121FCF; */
-    }
-    .SD__NavBar{
-        /* padding: 8px 5px; */
-        /* max-width: 250px; */
-    }
-    .SD__NavBar a{
-        /* margin-left: 20px;
-        background: #000;
-        margin: 0px; */
-    }
-    .SD__Txt{
-        /* padding-left: 8px; */
-    }
+
     .nav-item a{
-        margin-left: 20px;
+        margin-left: var(--navbar-mobile-navlink-margin);
     }
-    .SD__NavBar a{
-        /* margin-left: 10px; */
-    }
+    
     .nav-item{
         border-bottom: 1px solid white;
     }
@@ -1333,29 +1322,13 @@ body {
         border-bottom: none;
     }
     .navbar-nav .nav-link{
-        padding-left: 18px;
+        padding-left: var(--navbar-mobile-navlink-padding);
     }
-    /* .SD_Top_border{
-        display: none;
-    }
-    .SD_Top_border::after{
-        content: none;
-    }
-    .SD_Top_border::before{
-        content: none;
-    }
-    .SD_Bottom_border{
-        display: none;
-    }
-    .SD_Bottom_border::after{
-        content: none;
-    }
-    .SD_Bottom_border::before{
-        content: none;
-    } */
+
     .SD__NavBar a{
         box-shadow: none;
     }
+
     .Section__Heading{
         padding-top: 0;
     }
