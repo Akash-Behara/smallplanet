@@ -1111,6 +1111,33 @@ body {
 }
 
 @media screen and (min-width: 766px) and (max-width: 1000px) {
+    .SD__NavBar a{
+        margin: 0;
+    }
+    .nav-item a{
+        padding-left: 10px;
+    }
+    .SD_Top_border{
+        display: none;
+    }
+    .SD_Top_border::after{
+        content: none;
+    }
+    .SD_Top_border::before{
+        content: none;
+    }
+    .SD_Bottom_border{
+        display: none;
+    }
+    .SD_Bottom_border::after{
+        content: none;
+    }
+    .SD_Bottom_border::before{
+        content: none;
+    }
+    .SD__NavBar a{
+        box-shadow: none;
+    }
     .Hero__Content__Container_Digital{
         height: 100%;
         min-height: 700px;
@@ -1271,10 +1298,49 @@ body {
     .Section__Heading{
         padding-top: 0;
     }
+    .navbar{
+        background-color: #121FCF;
+    }
     
 }
 
 @media only screen and  (max-width: 500px) {
+    .navbar{
+        background-color: #121FCF;
+    }
+    .SD__NavBar a{
+        margin: 0;
+    }
+    .nav-item a{
+        margin-left: 10px;
+    }
+    .nav-item{
+        border-bottom: 1px solid white;
+    }
+    .nav-item:nth-child(5){
+        border-bottom: none;
+    }
+    .SD_Top_border{
+        display: none;
+    }
+    .SD_Top_border::after{
+        content: none;
+    }
+    .SD_Top_border::before{
+        content: none;
+    }
+    .SD_Bottom_border{
+        display: none;
+    }
+    .SD_Bottom_border::after{
+        content: none;
+    }
+    .SD_Bottom_border::before{
+        content: none;
+    }
+    .SD__NavBar a{
+        box-shadow: none;
+    }
     .Section__Heading{
         padding-top: 0;
     }
