@@ -1306,13 +1306,25 @@ body {
 
 @media only screen and  (max-width: 500px) {
     .navbar{
-        background-color: #121FCF;
+        /* background-color: #121FCF; */
+    }
+    .SD__NavBar{
+        /* padding: 8px 5px; */
+        /* max-width: 250px; */
     }
     .SD__NavBar a{
-        margin: 0;
+        /* margin-left: 20px;
+        background: #000;
+        margin: 0px; */
+    }
+    .SD__Txt{
+        /* padding-left: 8px; */
     }
     .nav-item a{
-        margin-left: 10px;
+        margin-left: 20px;
+    }
+    .SD__NavBar a{
+        /* margin-left: 10px; */
     }
     .nav-item{
         border-bottom: 1px solid white;
@@ -1320,7 +1332,10 @@ body {
     .nav-item:nth-child(5){
         border-bottom: none;
     }
-    .SD_Top_border{
+    .navbar-nav .nav-link{
+        padding-left: 18px;
+    }
+    /* .SD_Top_border{
         display: none;
     }
     .SD_Top_border::after{
@@ -1337,7 +1352,7 @@ body {
     }
     .SD_Bottom_border::before{
         content: none;
-    }
+    } */
     .SD__NavBar a{
         box-shadow: none;
     }
