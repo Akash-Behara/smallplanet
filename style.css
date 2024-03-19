@@ -43,6 +43,7 @@ body {
     justify-content: end;
     align-items: center;
     max-width: 170px;
+    z-index: 10;
 }
 .Whatsapp__Content{
     display: flex;
