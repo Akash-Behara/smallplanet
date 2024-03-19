@@ -14,6 +14,7 @@
     --navbar-mobile-navlink-margin: 20px;
     --navbar-paper-clip-position-top: 25%;
     --navbar-paper-clip-position-right: -30%;
+    --moon-color: white;
 }
 
 *{
@@ -31,6 +32,66 @@ body {
     font-family: "Roboto Mono", monospace;
     color: rgba(0, 0, 0, 0.811);
     background: radial-gradient(ellipse farthest-side at top center, #c1c5edd5 2%, #ffffff 5%);
+}
+
+
+.Whatsapp__Container{
+    position: sticky;
+    top: 50%;
+    left: 88%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    max-width: 170px;
+}
+.Whatsapp__Content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    transform-origin: right;
+}
+.animate{
+    animation: whatappAnim 1.5s linear;
+}
+.Whatapp__Txt{
+    padding: 5px 20px;
+    border-radius: 8px;
+    background: green;
+    color: white;
+    font-weight: 700;
+}
+.Whatsapp__img{
+    width: 50px;
+    position: relative;
+}
+
+@keyframes whatappAnim {
+    0%{
+      scale: 0.9;  
+    }
+    10%{
+        scale: 0.9;
+    }
+    30%{
+        scale: 1.05;
+    }
+    40%{
+        transform: rotate(-8deg);
+        scale: 1.05;
+    }
+    50%{
+        transform: rotate(8deg);
+        scale: 1.05;
+    }
+    60%{
+        transform: rotate(-8deg);
+        scale: 1.05;
+    }
+    70%{
+        transform: rotate(8deg);
+        scale: 1.05;
+    }
 }
 
 .box{
@@ -108,7 +169,7 @@ body {
     width: var(--moon_size);
     height: var(--moon_size);
     border-radius: 50%;
-    background: white;
+    background: var(--moon-color);
     position: absolute;
     top: 45%;
     left: 25%;
@@ -155,7 +216,36 @@ body {
     backdrop-filter: blur( 12px );
     -webkit-backdrop-filter: blur( 12px );
 }
-
+.Nav__Container{
+    position: relative;
+}
+.Navbar__Swing__Container{
+    position: absolute;
+    bottom: -70%;
+    right: 0;
+    transform-origin: top;
+    animation: navbarSwingAnim .8s alternate infinite;
+}
+.Navbar__swing_cirlce{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: blue;
+}
+.Navbar__swing_box{
+    width: 20px;
+    height: 60px;
+    border-radius: 5px;
+    background: blue;
+}
+@keyframes navbarSwingAnim{
+    0%{
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: rotate(-10deg);
+    }
+}
 .SD__a__Container{
     position: relative;
 }
@@ -225,7 +315,6 @@ body {
 .nav-link:hover{
     cursor: pointer;
 }
-
 .navbar-nav{
     background-color: var(--navbar-item-bg-hover)  !important;
     border-radius: 8px;
@@ -233,7 +322,6 @@ body {
     color: var(--navbar-item-txt-hover);
     padding: 6px 14px;
 }
-
 .navbar-nav .nav-item:hover{
     background: var(--navbar-item-txt-hover);
     color: var(--navbar-item-bg-hover) !important;
@@ -244,8 +332,6 @@ body {
 .navbar-nav .nav-item a{
     color: inherit;
 }
-
-
 .Paper__Clip{
     position: absolute;
     top: 10%;
@@ -676,12 +762,14 @@ body {
 
 
 .SD__Main__Container{
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     padding: 10px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 140px;
 }
 .SD__Section__Heading{
     display: flex;
@@ -796,6 +884,117 @@ body {
     left: 70%;
     transform: translateY(-50%);
     border-radius: 8px;
+}
+
+.Tab__3__Container{
+    width: 100%;
+}
+.SD__Content__Container{
+    width: 100%;
+}
+
+.Moon__Card__Container{
+    height: 450px;
+    width: 350px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 0;
+    margin: 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 10px 5px;
+    background-image: linear-gradient(315deg, #aaaa44 0%, #2b4162 70%);
+}
+.Moon__Top__Container{
+    background-color: #000;
+    flex-basis: 150px;
+    width: 100%;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 8px 8px 0 0;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 40%, 0% 100%);
+}
+.Moon__Moon{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background: var(--moon-color);
+    top: 28%;
+    left: 20%;
+    border-radius: 50%;
+}
+.Moon__Bottom__Container{
+    background-color: black;
+    flex-basis: 350px;
+    width: 100%;
+    text-align: justify;
+    padding: 0px 10px;
+    color: white;
+    border-radius: 0 0 8px 8px;
+    clip-path: polygon(0% 50%, 100% 0%, 100% 100%, 0% 100%);
+}
+.Clip__helper__txt{
+    height: 165px;
+    width: 100%;
+    float: left;
+    background: transparent;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 10%, 0% 100%);
+    shape-outside: polygon(0% 0%, 100% 0%, 100% 10%, 0% 100%);
+}
+.Moon__Card__Container:hover{
+    transition: ease-in-out 0.2s;
+    scale: 1.01;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 10px;
+}
+
+.Aboutus__Card__Table{
+    /* border: 1px solid #000; */
+    border-radius: 8px;
+    width: 350px;
+    height: 450px;
+    padding: 4px 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 10px 5px;
+}
+.Aboutus__Card__Table:hover{
+    transition: ease-in-out 0.2s;
+    scale: 1.01;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 10px;
+}
+
+.Glow__Table{
+    border: 2px solid skyblue;
+    border-radius: 8px;
+}
+.Glow__Table thead{
+    border-radius: 8px 8px 0 0;
+}
+.Glow__Table tbody{
+    border-radius: 0 0 8p 8px;
+}
+
+
+
+.Aboutus__Card__Tab{
+    height: 450px;
+    width: 350px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 10px 5px;
+}
+.Aboutus__Card__Tab:hover{
+    transition: ease-in-out 0.2s;
+    scale: 1.01;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 10px;
+}
+
+.Aboutus__Card__Tab img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px 8px 0 0;
+}
+.Card__Content:nth-child(2){
+    font-size: 14px;
 }
 
 
@@ -964,6 +1163,27 @@ body {
     width: 300px;
     height: 454px;
   }
+  .Fancy__Animated__Card {
+    overflow: visible;
+    width: 370px;
+    height: 450px;
+  }
+  .Tabs__Title__img{
+    width: 25px;
+  }
+
+  .nav-tabs .nav-link.active {
+    background: #121FCF;
+    color: white;
+    border: 2px solid rgba(0, 0, 0, 0.656);
+  }
+
+  .nav-tabs .nav-link{
+    border: 1px solid #0000000f;
+  }
+  .nav-tabs .nav-link:hover{
+    border: 1px solid #0000003e;
+  }
   
   .content {
     width: 100%;
@@ -1019,6 +1239,9 @@ body {
   }
   
   .card:hover .content {
+    transform: rotateY(180deg);
+  }
+  .Fancy__Animated__Card:hover .content {
     transform: rotateY(180deg);
   }
   
@@ -1323,6 +1546,13 @@ body {
     .Section__Heading{
         padding-top: 0;
     }
+
+    .nav-tabs{
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 0;
+    }
     
     
 }
@@ -1443,6 +1673,33 @@ body {
         right: 0;
         bottom: 10%;
     }
+    .Aboutus__Card__Tab img {
+        width: 100%;
+        height: 200px;
+    }
+    .Card__Content:nth-child(2){
+        font-size: 12px;
+    }
+
+    .nav-tabs{
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 0;
+    }
+    .Tabs__Txt{
+        width: 100%;
+        padding: 5px;
+        /* max-width: 60px; */
+    }
+    .Tabs__Title__img{
+        width: 20px;
+    }
+
+    .Tab__Txt__txt{
+        display: none;
+    }
+    
     
 
 

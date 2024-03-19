@@ -151,6 +151,14 @@ document.addEventListener('DOMContentLoaded', () => {
     //     }
     // })
 
+    const whatsappAnim = document.getElementById('Whatsapp__Content')
+    setInterval(() => {
+        whatsappAnim.classList.add('animate');
+        const timer = setTimeout(() => {
+            whatsappAnim.classList.remove('animate');
+            clearTimeout(timer)
+        }, 4000)
+    }, 5000);
 
     const cube1 = document.querySelector('.cube');
     const cube2 = document.querySelector('.cube2');

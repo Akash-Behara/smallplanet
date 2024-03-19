@@ -13,8 +13,15 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary Nav__Container w-100 ">
-        <div class="container-fluid">
+    <span class="Whatsapp__Container" id="Whatsapp__Container">
+        <div class="Whatsapp__Content" id="Whatsapp__Content">
+            <div class="Whatapp__Txt">Join Us</div>
+            <img src="assets/whatsapp.png" alt="whatsapp" class="Whatsapp__img" id="Whatsapp__img"/>
+        </div>
+    </span>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary w-100 ">
+        <div class="container-fluid Nav__Container">
             <a class="navbar-brand" href="#"><img src="assets/smallPlanet_logo.png" alt="logo" class="Nav__Logo"/></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -45,6 +52,10 @@
                         <a class="nav-link" onclick="document.getElementById('acheivement').scrollIntoView()">Success Stories</a>
                     </li>
                 </ul>
+            </div>
+            <div class="Navbar__Swing__Container">
+                <div class="Navbar__swing_cirlce"></div>
+                <div class="Navbar__swing_box"></div>
             </div>
         </div>
     </nav>
@@ -168,13 +179,6 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur sapiente excepturi aliquid iusto officiis eos quae nihil accusantium consequatur nemo! Suscipit fugiat ad odit ullam doloremque accusantium mollitia libero officiis laudantium optio, deleniti a natus dolorem eaque distinctio nobis temporibus in accusamus quidem est? Pariatur?<span> <button id="openModalBtn2">Know more...</button></span></p>
                     </div>
                 </div>
-                <!-- <div class="Aboutus__Card px-0 col-3 ">
-                    <img src="https://images.unsplash.com/photo-1707343843437-caacff5cfa74?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="img"/>
-                    <div class="Card__Content">
-                        <h3>Heading</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur sapiente excepturi aliquid iusto officiis eos quae nihil accusantium consequatur nemo! Suscipit fugiat ad odit ullam doloremque accusantium mollitia libero officiis laudantium optio, deleniti a natus dolorem eaque distinctio nobis temporibus in accusamus quidem est? Pariatur?</p>
-                    </div>
-                </div> -->
             </div>
             <div id="myModal" class="modal">
                 <div class="Modal-Content" id="modal-content">
@@ -322,13 +326,18 @@
                     </div>
                 </div> -->
                 <div>
-                    <nav>
-                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                          <button class="nav-link active Tabs__Txt" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Key Features</button>
-                          <button class="nav-link Tabs__Txt" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Benefits</button>
+                    <nav class="w-100">
+                        <div class="nav nav-tabs id="nav-tab" role="tablist">
+                          <button class="nav-link active Tabs__Txt" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><img src="assets/features.png" alt="features" class="Tabs__Title__img"/> <span class="Tab__Txt__txt">Features</span></button>
+                          <button class="nav-link Tabs__Txt" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><img src="assets/authenticity.png" alt="features" class="Tabs__Title__img"/><span class="Tab__Txt__txt">Benefits</span></button>
+                          <button class="nav-link Tabs__Txt" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-test" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><img src="assets/features.png" alt="features" class="Tabs__Title__img"/><span class="Tab__Txt__txt">Test</span></button>
+                          <button class="nav-link Tabs__Txt" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-test2" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><img src="assets/features.png" alt="features" class="Tabs__Title__img"/><span class="Tab__Txt__txt">Test2</span></button>
+                          <button class="nav-link Tabs__Txt" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-test2" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><img src="assets/features.png" alt="features" class="Tabs__Title__img"/><span class="Tab__Txt__txt">Test2</span></button>
+                          <button class="nav-link Tabs__Txt" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-test2" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><img src="assets/features.png" alt="features" class="Tabs__Title__img"/><span class="Tab__Txt__txt">Test2</span></button>
+                          <button class="nav-link Tabs__Txt" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-test2" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><img src="assets/features.png" alt="features" class="Tabs__Title__img"/><span class="Tab__Txt__txt">Test2</span></button>
                         </div>
-                      </nav>
-                      <div class="tab-content mt-3" id="nav-tabContent">
+                    </nav>
+                    <div class="tab-content mt-3 w-100" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                             <div class="SD__Feat__Container">
                                 <div class="SD__Feat__Container__Left">
@@ -391,13 +400,263 @@
                                 </div>
                             </div>
                         </div>
-                      </div>
+                        <div class="tab-pane fade" id="nav-test" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <div class="Tab__3__Container">
+                                <div>
+                                    <p>Lorem ipsum dolor adipisci. Quos, voluptate? Perferendis voluptates, nulla ab blanditiis repellat velit enim! ipsum dolor sit amet consectetur, adipisicing elit. Magni nulla fuga placeat, odit adipisci aliquid commodi sed harum explicabo nisi? consectetur adipisicing elit. Omnis saepe ea magni molestiae optio, vero placeat pariatur quas quaerat reprehenderit.</p>
+                                </div>
+                                <div class="row m-0 p-0 mt-5  justify-content-center  gap-5 w-100 ">
+                                    <div class="Moon__Card__Container">
+                                        <div class="Moon__Top__Container">
+                                            <div>
+                                                <h2>Heading</h2>
+                                                <p>Short Desc</p>
+                                            </div>
+                                        </div>
+                                        <div class="Moon__Moon"></div>
+                                        <div class="Moon__Bottom__Container">
+                                            <div class="Clip__helper__txt"></div>
+                                            <p>Lorem, ipsum dolor sit consectetur adipisicing elit. Aliquid, aut nemo iste iure quibusdam quos dolorum quidem sed eius repudiandae animi natus eum, pariatur magni impedit consectetur. Dolores, aspernatur consequuntur?</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="Aboutus__Card__Tab px-0 col-3 ">
+                                        <img src="https://images.unsplash.com/photo-1707343843437-caacff5cfa74?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="img"/>
+                                        <div class="Card__Content">
+                                            <h3>Heading</h3>
+                                            <p class="Card__Content_Short_Desc">Short Desc</p>
+                                            <p>Lorem ipsum dolor excepturi odit ullam doloremque accusantium mollitia libero officiis laudantium optio, deleniti a natus dolorem eaque distinctio nobis temporibus in accusamus quidem est? Pariatur?<span> <button id="openModalBtn">Know more...</button></span></p>
+                                        </div>
+                                    </div>
+                                    <div class="Aboutus__Card__Table col-3 ">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                      <th scope="col">#</th>
+                                                      <th scope="col">First</th>
+                                                      <th scope="col">Last</th>
+                                                      <th scope="col">Handle</th>
+                                                    </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                    <tr>
+                                                      <th scope="row">1</th>
+                                                      <td>Mark</td>
+                                                      <td>Otto</td>
+                                                      <td>@mdo</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <th scope="row">2</th>
+                                                      <td>Jacob</td>
+                                                      <td>Thornton</td>
+                                                      <td>@fat</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <th scope="row">3</th>
+                                                      <td colspan="2">Larry the Bird</td>
+                                                      <td>@twitter</td>
+                                                    </tr>
+                                                  </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="table-responsive mt-2">
+                                            <table class="table table-bordered Glow__Table">
+                                                <thead>
+                                                    <tr>
+                                                      <th scope="col">#</th>
+                                                      <th scope="col">First</th>
+                                                      <th scope="col">Last</th>
+                                                      <th scope="col">Handle</th>
+                                                    </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                    <tr>
+                                                      <th scope="row">1</th>
+                                                      <td>Mark</td>
+                                                      <td>Otto</td>
+                                                      <td>@mdo</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <th scope="row">2</th>
+                                                      <td>Jacob</td>
+                                                      <td>Thornton</td>
+                                                      <td>@fat</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <th scope="row">3</th>
+                                                      <td colspan="2">Larry the Bird</td>
+                                                      <td>@twitter</td>
+                                                    </tr>
+                                                  </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-test2" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <div class="Tab__3__Container">
+                                <div>
+                                    <p>Lorem ipsum dolor adipisci. Quos, voluptate? Perferendis voluptates, nulla ab blanditiis repellat velit enim! ipsum dolor sit amet consectetur, adipisicing elit. Magni nulla fuga placeat, odit adipisci aliquid commodi sed harum explicabo nisi? consectetur adipisicing elit. Omnis saepe ea magni molestiae optio, vero placeat pariatur quas quaerat reprehenderit.</p>
+                                </div>
+                                <div class="row m-0 p-0 mt-5  justify-content-center  gap-5 w-100 ">
+                                    <div class="Moon__Card__Container">
+                                        <div class="Moon__Top__Container">
+                                            <div>
+                                                <h2>Heading</h2>
+                                                <p>Short Desc</p>
+                                            </div>
+                                        </div>
+                                        <div class="Moon__Moon"></div>
+                                        <div class="Moon__Bottom__Container">
+                                            <div class="Clip__helper__txt"></div>
+                                            <p>Lorem, ipsum dolor sit consectetur adipisicing elit. Aliquid, aut nemo iste iure quibusdam quos dolorum quidem sed eius repudiandae animi natus eum, pariatur magni impedit consectetur. Dolores, aspernatur consequuntur?</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="Fancy__Animated__Card">
+                                        <div class="content">
+                                            <div class="back">
+                                                <div class="back-content">
+                                                    <div class="services_img__container ">
+                                                        <img src="assets/chatbot_services.png" alt="Product immage" class="services_img_1 services_img_1_move"/>
+                                                        <img src="assets/Product_services.png" alt="Product immage" class="services_img_2 services_img_2_move"/>
+                                                    </div>
+                                                    <div class=" ">
+                                                        <div class="Services__Content__Container d-flex flex-column">
+                                                            <h3 class="text-center "><span class="services_title_color">/</span>Internet & Intranet Solutions<span class="services_title_color">/</span></h3>
+                                                            <ul class="w-100 ">
+                                                                <li class="d-flex  justify-content-start align-items-center gap-1 "><i class="bi bi-check2"></i>Product Development</li>
+                                                                <li class="d-flex  justify-content-start align-items-center gap-1 "><i class="bi bi-check2"></i>Development Projects</li>
+                                                                <li class="d-flex  justify-content-start align-items-center gap-1 "><i class="bi bi-check2"></i>Software Implementation</li>
+                                                                <li class="d-flex  justify-content-start align-items-center gap-1 "><i class="bi bi-check2"></i>ERP Integration</li>
+                                                                <li class="d-flex  justify-content-start align-items-center gap-1 "><i class="bi bi-check2"></i>E-Commerce Applications</li>
+                                                                <li class="d-flex  justify-content-start align-items-center gap-1 "><i class="bi bi-check2"></i>Turn-Key (E2E) basis</li>
+                                                                <li class="d-flex  justify-content-start align-items-center gap-1 "><i class="bi bi-check2"></i>Subcontracting</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="front">
+                                                
+                                                <div class="img">
+                                                    <div class="circle"></div>
+                                                    <div class="circle" id="right"></div>
+                                                    <div class="circle" id="bottom"></div>
+                                                </div>
+                                        
+                                                <div class="front-content">
+                                                    <div class="mt-2 p-2">
+                                                        <p class="text-start m-0 p-0 Service__Card1__Heading">Our development methodology is based on two approaches,<br/>
+                                                            <div class="Main__Point__Txt">
+                                                                <div class="Bullet__Point__Circle"></div>
+                                                                <div class="text-center">"User-centric"</div>
+                                                            </div>
+                                                            <div class="Main__Point__Txt">
+                                                                <div class="Bullet__Point__Circle"></div>
+                                                                <div class="text-center">"Total-Cost-of-Ownership (TCO) - centric"</div>
+                                                            </div>
+                                                        </p>
+                                                    </div>
+                                                    <div class="text-center p-1 Services__Internet__Txt">
+                                                        <p>
+                                                            <span class="Services__Detail__Point">User-centric </span>approach of Small Planet exactly revolves around this recent concept - "how the User is going to feel about our software". Note, this approach is One Step Ahead of customer-centric approach (i.e. customer satisfaction or customer delight). The End Users of a software are one step Further Down the Line.
+                                                        </p>
+                                                        <p>
+                                                            <span class="Services__Detail__Point">TCO-centric </span>approach, affects the entire development and maintenance cycle. We need to design the software in such a way that the initial cost of development remains under control and Also the future Several Years of Maintenance and Service cost remains affordable.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="Fancy__Animated__Card">
+                                        <div class="content">
+                                            <div class="back">
+                                                <div class="back-content">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered text-white">
+                                                            <thead>
+                                                                <tr>
+                                                                  <th scope="col">#</th>
+                                                                  <th scope="col">First</th>
+                                                                  <th scope="col">Last</th>
+                                                                  <th scope="col">Handle</th>
+                                                                </tr>
+                                                              </thead>
+                                                              <tbody>
+                                                                <tr>
+                                                                  <th scope="row">1</th>
+                                                                  <td>Mark</td>
+                                                                  <td>Otto</td>
+                                                                  <td>@mdo</td>
+                                                                </tr>
+                                                                <tr>
+                                                                  <th scope="row">2</th>
+                                                                  <td>Jacob</td>
+                                                                  <td>Thornton</td>
+                                                                  <td>@fat</td>
+                                                                </tr>
+                                                                <tr>
+                                                                  <th scope="row">3</th>
+                                                                  <td colspan="2">Larry the Bird</td>
+                                                                  <td>@twitter</td>
+                                                                </tr>
+                                                              </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="front">
+                                                <div class="front-content">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered text-white">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">#</th>
+                                                                    <th scope="col">First</th>
+                                                                    <th scope="col">Last</th>
+                                                                    <th scope="col">Handle</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <th scope="row">1</th>
+                                                                    <td>Mark</td>
+                                                                    <td>Otto</td>
+                                                                    <td>@mdo</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">2</th>
+                                                                    <td>Jacob</td>
+                                                                    <td>Thornton</td>
+                                                                    <td>@fat</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">3</th>
+                                                                    <td colspan="2">Larry the Bird</td>
+                                                                    <td>@twitter</td>
+                                                                </tr>
+                                                                </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- Methodology SECTION  -->
-        <div class="method mt-2" id="Methodology"> 
+        <!-- <div class="method mt-2" id="Methodology"> 
             <div class="Methodology__Heading px-4"><div class="Section__Heading__line"></div><h2 class="w-100 text-center">Methodology</h2><div class="Section__Heading__line"></div></div>
             <section class="Process p-4">
                 <div class="d-flex Process__Content__Container">
@@ -750,7 +1009,7 @@
                     </div>
                 </div>
             </section>
-        </div>
+        </div> -->
 
 
         <!-- SERVICE SECTION -->
