@@ -222,9 +222,11 @@ body {
 }
 .Navbar__Swing__Container{
     position: absolute;
-    bottom: -70%;
+    /* bottom: -70%; */
     right: 0;
+    top: 70%;
     transform-origin: top;
+    transform: translateY(200px);
     animation: navbarSwingAnim .8s alternate infinite;
 }
 .Navbar__swing_cirlce{
@@ -1414,6 +1416,10 @@ body {
         z-index: 9;
         font-size: 14px;
     }
+    .Navbar__Swing__Container{
+        /* bottom: -20% */
+        top: 92%;
+    }
 
 
     .AboutUs__Container{
@@ -1889,6 +1895,11 @@ body {
     /* .pin-spacer{
         height: 4360px !important;
     } */
+
+    .Navbar__Swing__Container{
+        /* bottom: -20% */
+        top: 92%;
+    }
 }
 
 

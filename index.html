@@ -13,7 +13,7 @@
 </head>
 <body>
 
-    <span class="Whatsapp__Container" id="Whatsapp__Container">
+    <span class="Whatsapp__Container" id="Whatseapp__Container">
         <div class="Whatsapp__Content" id="Whatsapp__Content">
             <div class="Whatapp__Txt">Join Us</div>
             <img src="assets/whatsapp.png" alt="whatsapp" class="Whatsapp__img" id="Whatsapp__img"/>
@@ -28,11 +28,11 @@
             </button>
             <div class="collapse navbar-collapse d-lg-flex justify-content-end align-items-end " id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <li class="nav-item" >
+                        <a class="nav-link active"  aria-current="page" href="#" data-bs-toggle="collapse" data-bs-target="#navbarNav">Home</a>
                     </li>
                     <li class="nav-item SD__NavBar">
-                        <a class="nav-link SD__a__Container" onclick="document.getElementById('SD').scrollIntoView()">
+                        <a class="nav-link SD__a__Container" onclick="document.getElementById('SD').scrollIntoView()" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                             <span class="Paper__Clip">
                                 <span class="Blank__Space__paper_clip"></span>
                                 <!-- <img src="assets/clip-set-realistic-paperclip-attach-office-metal-binder-with-shadow_152104-1391-removebg-preview.png" alt="paper clip" /> -->
@@ -43,13 +43,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" onclick="document.getElementById('Methodology').scrollIntoView()">Process</a>
+                        <a class="nav-link" onclick="document.getElementById('Methodology').scrollIntoView()" data-bs-toggle="collapse" data-bs-target="#navbarNav">Process</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" onclick="document.getElementById('Services').scrollIntoView()">Services</a>
+                        <a class="nav-link" onclick="document.getElementById('Services').scrollIntoView()" data-bs-toggle="collapse" data-bs-target="#navbarNav">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" onclick="document.getElementById('acheivement').scrollIntoView()">Success Stories</a>
+                        <a class="nav-link" onclick="document.getElementById('acheivement').scrollIntoView()" data-bs-toggle="collapse" data-bs-target="#navbarNav">Success Stories</a>
                     </li>
                 </ul>
             </div>
@@ -182,10 +182,10 @@
             </div>
             <div id="myModal" class="modal">
                 <div class="Modal-Content" id="modal-content">
-                  <span class="close">&times;</span>
-                  <p id="Modal__inner__Content">Modal content goes here..
+                    <span class="close">&times;</span>
+                    <p id="Modal__inner__Content">Modal content goes here..
                 </div>
-              </div>
+            </div>
             <!-- <div class="AboutUs__Container">
                 <div class="AboutUs__Img__Container">
                     <img src="assets/svg/undraw_stand_out_-1-oag.svg" alt="about us" />
@@ -289,7 +289,7 @@
                 </div>
             </div>
         </div> -->
-        <div class="SD__Main__Container">
+        <div class="SD__Main__Container" id="SD">
             <div class="SD__Section__Heading">
                 <h2>What is S-Designer?</h2>
                 <p>"Low code, no code" (LCNC) refers to a modern approach to software development that emphasizes the use of visual interfaces, drag-and-drop tools, and pre-built components to create applications and workflows with minimal or no traditional coding required.</p>
@@ -1229,7 +1229,7 @@
             </div> -->
         <!-- </div> -->
         <!-- </div> -->
-        <div class="Services__Main__Container">
+        <div class="Services__Main__Container" id="Services">
             <div class="Services__Section__Heading">
                 <h2>Services</h2>
             </div>
@@ -1484,9 +1484,13 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="dist/timeline.min.js"></script>
     <script>
+
         var modalorigins={};
         var modal = document.getElementById("myModal");
         var modalContent = document.getElementById("modal-content");
+        modalContent.addEventListener('click', (e) => {
+            e.stopPropagation()
+        })
         
 
 // Get the button that opens the modal
