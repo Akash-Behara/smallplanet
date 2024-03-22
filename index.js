@@ -126,19 +126,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
    //PROCESS
-   let sections = gsap.utils.toArray(".Process");
-   gsap.to(sections, {
-     xPercent: -100 * (sections.length - 1),
-     ease: "none",
-     scrollTrigger: {
-       trigger: ".method",
-       pin: true,
-       scrub: 1,
-       snap: 1 / (sections.length - 1),
-       // base vertical scrolling on how wide the container is so it feels more natural.
-       end: "+=3700",
-     }
-   });
+//    let sections = gsap.utils.toArray(".Process");
+//    let process = document.querySelector(".method");
+//    function getScrollAmount(){
+//         let processWidth = process.scrollWidth
+//         return -(processWidth - window.innerWidth)
+//    }
+//    console.log( getScrollAmount())
+//    gsap.to(process, {
+//      xPercent: getScrollAmount,
+//      ease: "none",
+//      scrollTrigger: {
+//        trigger: ".method",
+//        pin: true,
+//        pinSpacing: false,
+//        scrub: 1,
+//     //    snap: 1 / (process.length - 1),
+//        markers: true,
+//        start: "top 20%",
+//        end: () => `+=${getScrollAmount() * -1}`,
+//      }
+//    });
    // PROCESS END
 
     // window.addEventListener('scroll', () => {
@@ -152,13 +160,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // })
 
     const whatsappAnim = document.getElementById('Whatsapp__Content')
-    setInterval(() => {
-        whatsappAnim.classList.add('animate');
-        const timer = setTimeout(() => {
-            whatsappAnim.classList.remove('animate');
-            clearTimeout(timer)
-        }, 4000)
-    }, 5000);
+    // setInterval(() => {
+    //     whatsappAnim.classList.add('animate');
+    //     const timer = setTimeout(() => {
+    //         whatsappAnim.classList.remove('animate');
+    //         clearTimeout(timer)
+    //     }, 4000)
+    // }, 5000);
 
     const cube1 = document.querySelector('.cube');
     const cube2 = document.querySelector('.cube2');
@@ -406,6 +414,7 @@ function changeSide3(e) {
 // })
 
 // changeSide3()
+
 
 
 

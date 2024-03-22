@@ -53,7 +53,7 @@ body {
     transform-origin: right;
 }
 .animate{
-    animation: whatappAnim 1.5s linear;
+    animation: whatappAnim 1.5s linear infinite;
 }
 .Whatapp__Txt{
     padding: 5px 20px;
@@ -1001,6 +1001,13 @@ body {
 }
 
 
+.method {
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+    flex-wrap: nowrap;
+    /* width: 600%; */
+}
 .Methodology__Heading{
     font-size: 42px;
     font-weight: 800;

@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./serviceanim.css">
     <link rel="stylesheet" href="dist/timeline.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
     <title>Small Planet</title>
 </head>
 <body>
 
     <span class="Whatsapp__Container" id="Whatseapp__Container">
-        <div class="Whatsapp__Content" id="Whatsapp__Content">
+        <div class="Whatsapp__Content animate" id="Whatsapp__Content">
             <div class="Whatapp__Txt">Join Us</div>
             <img src="assets/whatsapp.png" alt="whatsapp" class="Whatsapp__img" id="Whatsapp__img"/>
         </div>
@@ -23,16 +25,16 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary w-100 ">
         <div class="container-fluid Nav__Container">
             <a class="navbar-brand" href="#"><img src="assets/smallPlanet_logo.png" alt="logo" class="Nav__Logo"/></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"  data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse d-lg-flex justify-content-end align-items-end " id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item" >
-                        <a class="nav-link active" onclick="document.getElementById('home').scrollIntoView()"  aria-current="page" href="/" data-bs-toggle="collapse" data-bs-target="#navbarNav">Home</a>
+                        <a class="nav-link active NavBar__Link" id="NavBar__Link" onclick="document.getElementById('home').scrollIntoView()"  aria-current="page" href="/"  data-bs-target="#navbarNav">Home</a>
                     </li>
                     <li class="nav-item SD__NavBar">
-                        <a class="nav-link SD__a__Container" onclick="document.getElementById('SD').scrollIntoView()" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <a class="nav-link SD__a__Container NavBar__Link" onclick="document.getElementById('SD').scrollIntoView()"  data-bs-target="#navbarNav">
                             <span class="Paper__Clip">
                                 <span class="Blank__Space__paper_clip"></span>
                                 <!-- <img src="assets/clip-set-realistic-paperclip-attach-office-metal-binder-with-shadow_152104-1391-removebg-preview.png" alt="paper clip" /> -->
@@ -43,13 +45,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" onclick="document.getElementById('Methodology').scrollIntoView()" data-bs-toggle="collapse" data-bs-target="#navbarNav">Process</a>
+                        <a class="nav-link NavBar__Link" id="NavBar__Link" onclick="document.getElementById('Methodology').scrollIntoView()"  data-bs-target="#navbarNav">Process</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" onclick="document.getElementById('Services').scrollIntoView()" data-bs-toggle="collapse" data-bs-target="#navbarNav">Services</a>
+                        <a class="nav-link NavBar__Link" id="NavBar__Link" onclick="document.getElementById('Services').scrollIntoView()" data-bs-toggle="collapse" data-bs-target="#navbarNav">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" onclick="document.getElementById('acheivement').scrollIntoView()" data-bs-toggle="collapse" data-bs-target="#navbarNav">Success Stories</a>
+                        <a class="nav-link NavBar__Link" id="NavBar__Link" onclick="document.getElementById('acheivement').scrollIntoView()" data-bs-toggle="collapse" data-bs-target="#navbarNav">Success Stories</a>
                     </li>
                 </ul>
             </div>
@@ -295,6 +297,7 @@
                 <p>"Low code, no code" (LCNC) refers to a modern approach to software development that emphasizes the use of visual interfaces, drag-and-drop tools, and pre-built components to create applications and workflows with minimal or no traditional coding required.</p>
             </div>
             <div class="SD__Content__Container">
+                <div onclick="addTab()" class="w-25 ">ADD TAB</div>
                 <!-- <div class="SD__Feat__Container">
                     <div class="SD__Feat__Container__Left">
                         <div class="SD__Key__Txt mb-2">Key Features</div>
@@ -327,13 +330,10 @@
                 </div> -->
                 <div>
                     <nav class="w-100">
-                        <div class="nav nav-tabs id="nav-tab" role="tablist">
+                        <div class="nav nav-tabs Tabs__Container" id="nav-tab" role="tablist">
                           <button class="nav-link active Tabs__Txt" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><img src="assets/features.png" alt="features" class="Tabs__Title__img"/> <span class="Tab__Txt__txt">Features</span></button>
                           <button class="nav-link Tabs__Txt" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><img src="assets/authenticity.png" alt="features" class="Tabs__Title__img"/><span class="Tab__Txt__txt">Benefits</span></button>
                           <button class="nav-link Tabs__Txt" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-test" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><img src="assets/features.png" alt="features" class="Tabs__Title__img"/><span class="Tab__Txt__txt">Test</span></button>
-                          <button class="nav-link Tabs__Txt" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-test2" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><img src="assets/features.png" alt="features" class="Tabs__Title__img"/><span class="Tab__Txt__txt">Test2</span></button>
-                          <button class="nav-link Tabs__Txt" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-test2" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><img src="assets/features.png" alt="features" class="Tabs__Title__img"/><span class="Tab__Txt__txt">Test2</span></button>
-                          <button class="nav-link Tabs__Txt" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-test2" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><img src="assets/features.png" alt="features" class="Tabs__Title__img"/><span class="Tab__Txt__txt">Test2</span></button>
                           <button class="nav-link Tabs__Txt" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-test2" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><img src="assets/features.png" alt="features" class="Tabs__Title__img"/><span class="Tab__Txt__txt">Test2</span></button>
                         </div>
                     </nav>
@@ -374,25 +374,27 @@
                             <div class="SD__Bene__Container">
                                 <div class="SD__Bene__Content__Container">
                                     <div>
-                                        <div class="SD__Bene">
-                                            <div class="d-flex ">1. <h2 class="m-0 p-0">Speed and Efficiency:</h2></div>
-                                            <p class="ms-4 ms-lg-5">LCNC reduces development time and costs by eliminating the need for extensive coding and infrastructure setup.</p>
-                                        </div>
-                                        <div class="SD__Bene mt-3">
-                                            <div class="d-flex ">2. <h2> Flexibility and Customization:</h2></div>
-                                            <p class="ms-4 ms-lg-5"> Users can easily customize and extend LCNC applications to meet evolving business requirements.</p>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="SD__Bene mt-3">
-                                            <div class="d-flex ">3. <h2> Empowerment and Innovation:</h2></div>
-                                            <p class="ms-4 ms-lg-5"> LCNC empowers non-technical users to drive innovation and solve business challenges independently.</p>
-                                        </div>
-                                        <div class="SD__Bene mt-3">
-                                            <div class="d-flex ">4. <h2> Scalability and Integration:</h2></div>
-                                            <p class="ms-4 ms-lg-5">LCNC platforms offer scalability and seamless integration with existing systems, enabling organizations to adapt and grow.</p>
-                                            <!-- <p class="ms-4 ms-lg-5 m-0 p-0">Lower barrier to entry and higher developer retention.</p> -->
-                                        </div>
+                                        <form action="">
+                                            <label for="fname">First Name</label>
+                                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                                            <br />
+                                        
+                                            <input type="radio" id="male" name="gender">
+                                            <label for="male">Male</label>
+                                        
+                                            <input type="radio" id="female" name="gender">
+                                            <label for="female">Female</label>
+                                            <br />
+                                        
+                                            <label for="country">Country</label>
+                                            <select id="country" name="country">
+                                              <option value="australia">Australia</option>
+                                              <option value="canada">Canada</option>
+                                              <option value="usa">USA</option>
+                                            </select>
+                                          
+                                            <input type="submit" value="Submit">
+                                          </form>
                                     </div>
                                 </div>
                                 <div class="SD__Bene__Img__Container">
@@ -655,6 +657,41 @@
             </div>
         </div>
 
+        <div class="NEW__SD__Main__Container">
+            <div>
+                <h2>Low-code/no-code (LCNC) is a method of developing applications using visual programming, automatic code generation, and model-driven design.</h2>
+                <p>SmallPlanet Software offers a leading low-code enterprise app development platform, streamlining business processes and interfaces at scale. IT professionals receive powerful tools for building custom apps efficiently. Our solution enables rapid, cost-effective, and future-proof app development, transforming your IT department into an agile app factory, saving time and resources across development, integration, and operations.</p>
+            </div>
+            <div>
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img class="d-block w-50 h-50" src="assets/20944999-removebg-preview.png" alt="First slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-50 h-50" src="assets/2672335-removebg-preview.png" alt="Second slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-50 h-50" src="assets/2965738-removebg-preview.png" alt="Third slide">
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+            </div>
+        </div>
+
         <!-- Methodology SECTION  -->
         <!-- <div class="method mt-2" id="Methodology"> 
             <div class="Methodology__Heading px-4"><div class="Section__Heading__line"></div><h2 class="w-100 text-center">Methodology</h2><div class="Section__Heading__line"></div></div>
@@ -788,26 +825,6 @@
                     </div>
                 </div>
             </section>
-
-            <section class="Process p-4 ">
-                <div>
-                    <div class="Process__3__Heading text-center ">
-                        <h2>Sample of SPSP design documentation format (Partial)</h2>
-                    </div>
-                    <div class="d-flex justify-content-center align-items-center mt-3">
-                        <div class="d-flex flex-column flex-lg-row gap-2 ">
-                            <div>
-                                <img src="assets/process_4.PNG" alt="process" class="Process__3__Img"/>
-                            </div>
-                            <div>
-                                <img src="assets/process_5.PNG" alt="process" class="Process__3__Img"/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="Process p-4 ">
                 <div>
                     <div class="Process__5__Heading text-center ">
                         <h2>SPSP – Collaboration-capable and Partnership-friendly</h2>
@@ -1483,7 +1500,176 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="dist/timeline.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script>
+
+const tab = document.getElementById('nav-tab')
+const tabContent = document.getElementById('nav-tabContent')
+let tabTemplate = (id, name) => {
+    return (
+        `
+        <img src="assets/features.png" alt="features" class="Tabs__Title__img"/> <span class="Tab__Txt__txt">${name}</span>
+        <div onclick="removeTab('${id}')">RM</div>
+        `
+    )
+}
+let tabContentTemplate = (id) => {
+    return (
+        `
+            <div class="SD__Bene__Container">
+                <div class="SD__Bene__Content__Container">
+                    <div>
+                        <form action="">
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                            <br />
+                        
+                            <input type="radio" id="male" name="gender">
+                            <label for="male">Male</label>
+                        
+                            <input type="radio" id="female" name="gender">
+                            <label for="female">Female</label>
+                            <br />
+                        
+                            <label for="country">Country</label>
+                            <select id="country" name="country">
+                                <option value="australia">Australia</option>
+                                <option value="canada">Canada</option>
+                                <option value="usa">USA</option>
+                            </select>
+                            
+                            <input type="submit" value="Submit">
+                            </form>
+
+                            <div class="Fancy__Animated__Card">
+                                        <div class="content">
+                                            <div class="back">
+                                                <div class="back-content">
+                                                    <div class="services_img__container ">
+                                                        <img src="assets/chatbot_services.png" alt="Product immage" class="services_img_1 services_img_1_move"/>
+                                                        <img src="assets/Product_services.png" alt="Product immage" class="services_img_2 services_img_2_move"/>
+                                                    </div>
+                                                    <div class=" ">
+                                                        <div class="Services__Content__Container d-flex flex-column">
+                                                            <h3 class="text-center "><span class="services_title_color">/</span>Internet & Intranet Solutions<span class="services_title_color">/</span></h3>
+                                                            <ul class="w-100 ">
+                                                                <li class="d-flex  justify-content-start align-items-center gap-1 "><i class="bi bi-check2"></i>Product Development</li>
+                                                                <li class="d-flex  justify-content-start align-items-center gap-1 "><i class="bi bi-check2"></i>Development Projects</li>
+                                                                <li class="d-flex  justify-content-start align-items-center gap-1 "><i class="bi bi-check2"></i>Software Implementation</li>
+                                                                <li class="d-flex  justify-content-start align-items-center gap-1 "><i class="bi bi-check2"></i>ERP Integration</li>
+                                                                <li class="d-flex  justify-content-start align-items-center gap-1 "><i class="bi bi-check2"></i>E-Commerce Applications</li>
+                                                                <li class="d-flex  justify-content-start align-items-center gap-1 "><i class="bi bi-check2"></i>Turn-Key (E2E) basis</li>
+                                                                <li class="d-flex  justify-content-start align-items-center gap-1 "><i class="bi bi-check2"></i>Subcontracting</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="front">
+                                                
+                                                <div class="img">
+                                                    <div class="circle"></div>
+                                                    <div class="circle" id="right"></div>
+                                                    <div class="circle" id="bottom"></div>
+                                                </div>
+                                        
+                                                <div class="front-content">
+                                                    <div class="mt-2 p-2">
+                                                        <p class="text-start m-0 p-0 Service__Card1__Heading">Our development methodology is based on two approaches,<br/>
+                                                            <div class="Main__Point__Txt">
+                                                                <div class="Bullet__Point__Circle"></div>
+                                                                <div class="text-center">"User-centric"</div>
+                                                            </div>
+                                                            <div class="Main__Point__Txt">
+                                                                <div class="Bullet__Point__Circle"></div>
+                                                                <div class="text-center">"Total-Cost-of-Ownership (TCO) - centric"</div>
+                                                            </div>
+                                                        </p>
+                                                    </div>
+                                                    <div class="text-center p-1 Services__Internet__Txt">
+                                                        <p>
+                                                            <span class="Services__Detail__Point">User-centric </span>approach of Small Planet exactly revolves around this recent concept - "how the User is going to feel about our software". Note, this approach is One Step Ahead of customer-centric approach (i.e. customer satisfaction or customer delight). The End Users of a software are one step Further Down the Line.
+                                                        </p>
+                                                        <p>
+                                                            <span class="Services__Detail__Point">TCO-centric </span>approach, affects the entire development and maintenance cycle. We need to design the software in such a way that the initial cost of development remains under control and Also the future Several Years of Maintenance and Service cost remains affordable.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                    </div>
+                </div>
+                <div class="SD__Bene__Img__Container">
+                    <img src="assets/svg/undraw_relaxation_re_ohkx.svg" alt="relax coder" />
+                </div>
+            </div>        
+        `
+    )
+}
+let id;
+let ids = []
+const generateId = () => {
+    id = "#nav" + Math.floor(Math.random() * 1000);
+    ids.push(id)
+} 
+function addTab(){
+    generateId()
+    let tabName = prompt('Name of Tab...')
+    if(tabName == null || tabName == ""){
+        alert('Add tab Name')
+        return
+    }
+    let newTab = document.createElement('button')
+    newTab.classList.add('nav-link', 'Tabs__Txt')
+    newTab.id = id
+    newTab.setAttribute('data-bs-toggle', 'tab')
+    newTab.setAttribute('data-bs-target', id)
+    newTab.setAttribute('type', 'button')
+    newTab.setAttribute('role', 'tab')
+    newTab.innerHTML = tabTemplate(id, tabName)
+    tab.append(newTab)
+    addTabContent()
+}
+
+function addTabContent(){
+    let newTab = document.createElement('div')
+    newTab.id = id.substring(1, id.length - 0)
+    newTab.classList.add('tab-pane', 'fade')
+    newTab.setAttribute('role', 'tabpanel')
+    newTab.innerHTML = tabContentTemplate(id)
+    tabContent.append(newTab)
+}
+
+function removeTab(id){
+    console.log('id', id)
+
+    let tab = document.getElementById(id)
+    let tabContent = document.getElementById(id.substring(1))
+    tab.remove()
+    tabContent.remove()
+
+    let deletedId = ids.indexOf(id)
+    let newIds = ids.filter((el) => {
+        return el !== id
+    })
+
+    ids = newIds
+
+    console.log('ids', ids)
+    console.log('ids', ids[ids.length-1])
+    let prevTab = document.getElementById(ids[deletedId - 1 ])
+    let prevTabbtn = document.getElementById(ids[deletedId - 1].substring(1))
+    prevTab.classList.add('active', 'show')
+    prevTabbtn.classList.add('active', 'show')
+}
+
+
+
+
+
+
 
         var modalorigins={};
         var modal = document.getElementById("myModal");
@@ -1493,90 +1679,98 @@
         })
         
 
-// Get the button that opens the modal
-var btn = document.getElementById("openModalBtn");
-var btn2 = document.getElementById("openModalBtn2");
+        // Get the button that opens the modal
+        var btn = document.getElementById("openModalBtn");
+        var btn2 = document.getElementById("openModalBtn2");
 
-// When the user clicks the button, open the modal
-var x
-var y
-btn.onclick = function(event) {
-    x = event.clientX
-    y = event.clientY
-    // eval('modalorigins.'+modal.id+'="'+x+','+y+'");');
+        // When the user clicks the button, open the modal
+        var x
+        var y
+        btn.onclick = function(event) {
+            x = event.clientX
+            y = event.clientY
+            // eval('modalorigins.'+modal.id+'="'+x+','+y+'");');
 
-    modal.style.display = "block";
-    modalContent.style.display = "block"; 
-    modalContent.style.animation = 'modalAnim 0.35s'
+            modal.style.display = "block";
+            modalContent.style.display = "block"; 
+            modalContent.style.animation = 'modalAnim 0.35s'
 
+            modalContent.style.top = y + "px";
+            modalContent.style.left = x + "px";
+            modalContent.style.transform = "translate(-50%, -50%)";
+            modalContent.style.animationFillMode = 'forwards';
+            // modalContent.style.width = '60%';
+            // modalContent.style.height = '60%';
+            document.getElementById('Modal__inner__Content').style.display = 'block';
+            span.style.display = 'block';
+        }
+        btn2.onclick = function(event) {
+            x = event.clientX
+            y = event.clientY
+            // eval('modalorigins.'+modal.id+'="'+x+','+y+'");');
 
-    modalContent.style.top = y + "px";
-    modalContent.style.left = x + "px";
-    modalContent.style.transform = "translate(-50%, -50%)";
-    modalContent.style.animationFillMode = 'forwards';
-    // modalContent.style.width = '60%';
-    // modalContent.style.height = '60%';
-    document.getElementById('Modal__inner__Content').style.display = 'block';
-    span.style.display = 'block';
-}
-btn2.onclick = function(event) {
-    x = event.clientX
-    y = event.clientY
-    // eval('modalorigins.'+modal.id+'="'+x+','+y+'");');
+            modal.style.display = "block";
+            modalContent.style.display = "block"; 
+            modalContent.style.animation = 'modalAnim 0.35s'
 
-    modal.style.display = "block";
-    modalContent.style.display = "block"; 
-    modalContent.style.animation = 'modalAnim 0.35s'
+            modalContent.style.top = y + "px";
+            modalContent.style.left = x + "px";
+            modalContent.style.transform = "translate(-50%, -50%)";
+            modalContent.style.animationFillMode = 'forwards';
+            // modalContent.style.width = '60%';
+            // modalContent.style.height = '60%';
+            document.getElementById('Modal__inner__Content').style.display = 'block';
+            span.style.display = 'block';
 
+        }
 
-    modalContent.style.top = y + "px";
-    modalContent.style.left = x + "px";
-    modalContent.style.transform = "translate(-50%, -50%)";
-    modalContent.style.animationFillMode = 'forwards';
-    // modalContent.style.width = '60%';
-    // modalContent.style.height = '60%';
-    document.getElementById('Modal__inner__Content').style.display = 'block';
-    span.style.display = 'block';
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function(e) {
+            e.stopPropagation()
+            console.log('e', e)
+            modalContent.style.animation = 'modalAnimEnd 0.4s';
+            // modalContent.style.transition = 'ease-in-out 0.4s !important';
+            modalContent.style.top = y + "px !important";
+            modalContent.style.left = x + "px";
+            modalContent.style.transform = "translate(-50%, -50%)";
+            // modalContent.style.width = "0px";
 
-}
+            span.style.display = 'none';
+            document.getElementById('Modal__inner__Content').style.display = 'none';
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-span.onclick = function(e) {
-    e.stopPropagation()
-    console.log('e', e)
-    modalContent.style.animation = 'modalAnimEnd 0.4s';
-    // modalContent.style.transition = 'ease-in-out 0.4s !important';
-    modalContent.style.top = y + "px !important";
-    modalContent.style.left = x + "px";
-    modalContent.style.transform = "translate(-50%, -50%)";
-    // modalContent.style.width = "0px";
+            setTimeout(() => {
+                modal.style.display = "none";
+                modalContent.style.display = "none";
+            }, 220);
+        }
 
-    span.style.display = 'none';
-    document.getElementById('Modal__inner__Content').style.display = 'none';
+        modal.onclick = function(e){
+            e.stopPropagation()
 
-    setTimeout(() => {
-        modal.style.display = "none";
-        modalContent.style.display = "none";
-    }, 220);
-}
-modal.onclick = function(e){
-    e.stopPropagation()
+            modalContent.style.animation = 'modalAnimEnd 0.4s';
+            // modalContent.style.transition = 'ease-in-out 0.4s !important';
+            modalContent.style.top = y + "px !important";
+            modalContent.style.left = x + "px";
+            modalContent.style.transform = "translate(-50%, -50%)";
+            modalContent.style.width = "0px";
+            span.style.display = 'none';
+            document.getElementById('Modal__inner__Content').style.display = 'none';
 
-    modalContent.style.animation = 'modalAnimEnd 0.4s';
-    // modalContent.style.transition = 'ease-in-out 0.4s !important';
-    modalContent.style.top = y + "px !important";
-    modalContent.style.left = x + "px";
-    modalContent.style.transform = "translate(-50%, -50%)";
-    modalContent.style.width = "0px";
-    span.style.display = 'none';
-    document.getElementById('Modal__inner__Content').style.display = 'none';
+            setTimeout(() => {
+                modal.style.display = "none";
+                modalContent.style.display = "none";
+            }, 220);
+        }
 
-    setTimeout(() => {
-        modal.style.display = "none";
-        modalContent.style.display = "none";
-    }, 220);
-}
+        window.addEventListener('resize', () => {
+            const navbarLinks = document.querySelectorAll('NavBar__Link')
+            if(window.innerWidth < 768){
+                navbarLinks.forEach((el) => {
+                    el.setAttribute('data-bs-toggle', 'collapse')
+                })
+            }
+        })
     </script>
 </body>
 </html>
