@@ -54,6 +54,8 @@ body {
 }
 .animate{
     animation: whatappAnim 1.5s linear infinite;
+    animation-delay: 5s;
+    animation-timeline: view();
 }
 .Whatapp__Txt{
     padding: 5px 20px;
@@ -480,6 +482,7 @@ body {
     cursor: pointer;
     width: 300px;
     animation: scaleText 3000ms linear infinite;
+    animation-timeline: view();
 }
 .We__Diff__Txt_anim h2{
     color: #fff;
@@ -495,6 +498,7 @@ body {
 .We__Diff__Txt_anim h2:nth-child(2) {
     color: #0373f4;
     animation: animate 3s ease-in-out infinite;
+    animation-timeline: view();
 }
 @keyframes animate {
     0%,
@@ -1330,6 +1334,7 @@ body {
     position: relative;
     filter: blur(25px);
     animation: floating 2600ms infinite linear;
+    animation-timeline: view(y);
   }
   
   #bottom {
@@ -1339,6 +1344,7 @@ body {
     width: 150px;
     height: 150px;
     animation-delay: -800ms;
+    animation-timeline: view();
   }
   
   #right {
@@ -1348,6 +1354,7 @@ body {
     width: 30px;
     height: 30px;
     animation-delay: -1800ms;
+    animation-timeline: view();
   }
   
   @keyframes floating {

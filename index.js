@@ -168,6 +168,43 @@ document.addEventListener('DOMContentLoaded', () => {
     //     }, 4000)
     // }, 5000);
 
+    function isInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        var isinview = (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    
+        );
+        // returns true or false based on whether or not the element is in viewport
+        return isinview; 
+    }
+
+    let specialCard = document.querySelector('.Services__Section__Heading');
+    window.addEventListener('scroll', () =>{
+        console.log('in view', isInViewport(specialCard))
+        let icons = document.querySelectorAll('.services_img_1')
+        let icons2 = document.querySelectorAll('.services_img_2')
+        if(isInViewport(specialCard)){
+            icons.forEach((el) => {
+                el.classList.add('services_img_1_move')
+            })
+            icons2.forEach((el) => {
+                el.classList.add('services_img_1_move')
+            })
+        } else {
+            icons.forEach((el) => {
+                el.classList.remove('services_img_1_move')
+            })
+            icons2.forEach((el) => {
+                el.classList.remove('services_img_1_move')
+            })
+        }
+        
+      
+    })
+
     const cube1 = document.querySelector('.cube');
     const cube2 = document.querySelector('.cube2');
     const cube3 = document.querySelector('.cube3');
