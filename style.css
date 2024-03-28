@@ -1280,6 +1280,10 @@ body {
   .card:hover .content {
     transform: rotateY(180deg);
   }
+  .card_No_dim:hover .content{
+    transform: rotateY(180deg);
+
+  }
   .Fancy__Animated__Card:hover .content {
     transform: rotateY(180deg);
   }
