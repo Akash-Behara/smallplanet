@@ -1197,6 +1197,11 @@ body {
     width: 300px;
     height: 454px;
   }
+  .card_No_dim{
+    overflow: hidden;
+        /* width: 300px;
+        height: 454px; */
+  }
   .Fancy__Animated__Card {
     overflow: visible;
     width: 370px;
