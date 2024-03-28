@@ -135,6 +135,16 @@ body {
     scale: 1.01;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 10px;
 }
+.New__Card__No_Dimension{
+    border: 1px solid lightgray;
+    /* max-height: 570px; */
+    /* width: 400px; */
+    position: relative;
+    background-color: #2b4162;
+    background-image: linear-gradient(315deg, #aaaa44 0%, #2b4162 70%);
+    box-shadow: rgba(0, 0, 0, 0.35) 10px 10px 20px;
+    border-radius: 8px;
+}
 .Card__Content{
     padding: 8px 10px;
 }
@@ -147,6 +157,16 @@ body {
 .box2 {
     /* width: 400px; */
     height: 455px;
+    background: #000;
+    text-align: justify;
+    color: white;
+    clip-path: var(--path_box_2);
+    border-radius: 8px;
+    padding: 8px 4px;
+}
+.box2__No__Dimension {
+    /* width: 400px; */
+    /* height: 455px; */
     background: #000;
     text-align: justify;
     color: white;

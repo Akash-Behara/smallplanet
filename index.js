@@ -201,8 +201,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 el.classList.remove('services_img_1_move')
             })
         }
-        
-      
     })
 
     const cube1 = document.querySelector('.cube');
