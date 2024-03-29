@@ -121,8 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //         scrub: true,
     //     }
     // })
- 
-   
+        
 
 
    //PROCESS
@@ -144,10 +143,28 @@ document.addEventListener('DOMContentLoaded', () => {
 //     //    snap: 1 / (process.length - 1),
 //        markers: true,
 //        start: "top 20%",
-//        end: () => `+=${getScrollAmount() * -1}`,
+//        end: () => `+=3500`,
 //      }
 //    });
    // PROCESS END
+
+   let sections = gsap.utils.toArray(".panel");
+
+    gsap.to(sections, {
+    xPercent: -100 * (sections.length - 1),
+    ease: "none",
+    scrollTrigger: {
+        trigger: ".container_gsap",
+        start: "top 10%",
+        pin: true,
+        scrub: 1,
+        snap: 1 / (sections.length - 1),
+        markers: true,
+        // base vertical scrolling on how wide the container is so it feels more natural.
+        // end: "+=3500",
+    }
+    });
+
 
     // window.addEventListener('scroll', () => {
     //     console.log('scrol')
