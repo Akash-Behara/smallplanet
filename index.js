@@ -222,6 +222,41 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
+    let fancyCard = document.querySelectorAll('.content')
+    let isflipped = false
+    fancyCard.forEach((el) => {
+        el.addEventListener('click', () => {
+            isflipped = !isflipped
+            if(isflipped){
+                el.classList.add('card_hover')
+                el.classList.remove('card_not_hover')
+            } else {
+                el.classList.add('card_not_hover')
+                el.classList.remove('card_hover')
+            }
+            console.log('fli', isflipped)
+        })
+        el.addEventListener('mouseenter', () => {
+            isflipped = !isflipped
+            // if(isflipped){
+                el.classList.add('card_hover')
+                el.classList.remove('card_not_hover')
+            // }
+            console.log('fli mouse ebter', isflipped)
+
+        })
+        el.addEventListener('mouseleave', () => {
+            isflipped = !isflipped
+            // if(isflipped){
+                el.classList.add('card_not_hover')
+                el.classList.remove('card_hover')
+            // }  
+            console.log('fli mouese leave', isflipped)
+
+            // el.style.transform = isflipped? 'rotateY(0deg)' : 'rotateY(180deg)'
+        })
+    })
+
     const cube1 = document.querySelector('.cube');
     const cube2 = document.querySelector('.cube2');
     const cube3 = document.querySelector('.cube3');
