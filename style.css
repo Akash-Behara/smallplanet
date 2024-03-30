@@ -1442,23 +1442,23 @@ body {
 body{
     overflow-x: hidden;
     overflow-y: scroll;
-    overscroll-behavior: none;
+    /* overscroll-behavior: none; */
 }
 .Main__container_gsap{
     max-width: 100vw;
     height: 90vh;
     overflow-x: hidden;
-    overflow-y: hidden;
-    overscroll-behavior: none;
+    /* overflow-y: hidden; */
+    /* overscroll-behavior: none; */
 }
 .container_gsap {
-    overscroll-behavior: none;
+    /* overscroll-behavior: none; */
     width: 500vw;
     height: 100%;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: hidden;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
   .panel{
     width: 100vw;
