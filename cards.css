@@ -1,0 +1,37 @@
+:root{
+    --border_radius: 8px
+}
+
+.Image__Card__Container{
+    border: 1px solid lightgray;
+    border-radius: var(--border_radius);
+}
+.Image__Card__img img{
+    border-radius: var(--border_radius) var(--border_radius) 0 0;
+}
+.Image__Card__txt{
+    font-size: 1em;
+    padding: 10px;
+}
+
+
+.card_No_dim{
+    border-radius: var(--border_radius);
+}
+
+.New__Card__No_Dimension{
+    border-radius: var(--border_radius);
+}
+
+.clipped-text2{
+    /* font-size: 0.05em !important; */
+    padding: 0 4px 15px 4px;
+}
+
+@media screen and (max-width: 500px) {
+    .circleInCard{
+        width: 20px;
+        height: 20px;
+    }
+    
+}

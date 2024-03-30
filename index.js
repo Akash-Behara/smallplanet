@@ -151,20 +151,26 @@ document.addEventListener('DOMContentLoaded', () => {
    let sections = gsap.utils.toArray(".panel");
 
     gsap.to(sections, {
-    xPercent: -100 * (sections.length - 1),
-    ease: "none",
-    scrollTrigger: {
-        trigger: ".Main__container_gsap",
-        start: "top 10%",
-        // end: "bottom 10%",
-        pin: true,
-        scrub: 1,
-        snap: 1 / (sections.length - 1),
-        // markers: true,
-        // pinSpacing: false,
-        // base vertical scrolling on how wide the container is so it feels more natural.
-        end: "+=3500",
-    }
+        xPercent: -100 * (sections.length - 1),
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".Main__container_gsap",
+            start: "top 11%",
+            // end: "bottom 10%",
+            pin: true,
+            scrub: 1,
+            snap: {
+                snapTo: 1 / (sections.length - 1),
+                duration: 0.2,
+                delay: 0,
+                ease: "power1.inOut"
+            },
+            // snap: 1 / (sections.length - 1),
+            // markers: true,
+            // pinSpacing: false,
+            // base vertical scrolling on how wide the container is so it feels more natural.
+            end: "+=3500",
+        }
     });
 
 
