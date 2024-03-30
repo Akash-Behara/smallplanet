@@ -167,6 +167,9 @@ body {
         border-radius: 8px;
         padding: 8px 4px;
 }
+.New__Card__No_Dimension .circleInCard{
+
+}
 .Card__Content{
     padding: 8px 10px;
 }
@@ -1443,7 +1446,9 @@ body {
     border-radius: 8px;
 }
 
-
+.New__Card__No_Dimension .clipped-text2{
+    font-size: 13px !important;
+}
 
 body{
     overflow-x: hidden;
@@ -1800,6 +1805,9 @@ body{
         width: 300px;
     }
     .clipped-text2{
+        font-size: 12px !important;
+    }
+    .New__Card__No_Dimension .clipped-text2{
         font-size: 9px !important;
     }
 
@@ -2042,7 +2050,7 @@ body{
         top: 92%;
     }
 
-    .circleInCard{
+    .New__Card__No_Dimension .circleInCard{
         width: 40px;
         height: 40px;
         top: 60%;
