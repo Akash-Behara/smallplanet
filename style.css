@@ -158,13 +158,13 @@ body {
     border-radius: 8px 8px 0 0;
 }
 .box2__No__Dimension{
-        height: 100%;
-        background: #000;
-        text-align: justify;
-        color: white;
-        clip-path: var(--path_box_2);
-        border-radius: 8px;
-        padding: 8px 4px;
+    height: 100%;
+    background: #000;
+    text-align: justify;
+    color: white;
+    clip-path: var(--path_box_2);
+    border-radius: 8px;
+    padding: 8px 4px;
 }
 
 .Card__Content{

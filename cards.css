@@ -5,6 +5,7 @@
 .Image__Card__Container{
     border: 1px solid lightgray;
     border-radius: var(--border_radius);
+    box-shadow: rgba(0, 0, 0, 0.35) 10px 10px 20px;
 }
 .Image__Card__img img{
     border-radius: var(--border_radius) var(--border_radius) 0 0;
@@ -14,18 +15,31 @@
     padding: 10px;
 }
 
-
 .card_No_dim{
     border-radius: var(--border_radius);
 }
 
 .New__Card__No_Dimension{
     border-radius: var(--border_radius);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 10px;
 }
 
 .clipped-text2{
     /* font-size: 0.05em !important; */
     padding: 0 4px 15px 4px;
+}
+
+
+
+.Image__Card__Container:hover{
+    transition: ease-in-out 0.2s;
+    scale: 1.01;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 10px;
+}
+.New__Card__No_Dimension:hover{
+    transition: ease-in-out 0.2s;
+    scale: 1.01;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 10px;
 }
 
 @media screen and (max-width: 500px) {
