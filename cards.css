@@ -1,11 +1,12 @@
 :root{
-    --border_radius: 8px
+    --border_radius: 8px;
+    --box-shadow: rgba(0, 0, 0, 0.35) 10px 10px 20px;
 }
 
 .Image__Card__Container{
     border: 1px solid lightgray;
     border-radius: var(--border_radius);
-    box-shadow: rgba(0, 0, 0, 0.35) 10px 10px 20px;
+    box-shadow: var(--box-shadow);
 }
 .Image__Card__img img{
     border-radius: var(--border_radius) var(--border_radius) 0 0;
@@ -21,7 +22,7 @@
 
 .New__Card__No_Dimension{
     border-radius: var(--border_radius);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 10px;
+    box-shadow: var(--box-shadow);
 }
 
 .clipped-text2{
