@@ -940,7 +940,7 @@ body {
     width: 100%;
 }
 
-.Moon__Card__Container{
+/* .Moon__Card__Container{
     height: 450px;
     width: 350px;
     position: relative;
@@ -953,7 +953,7 @@ body {
     margin: 0;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 10px 5px;
     background-image: linear-gradient(315deg, #aaaa44 0%, #2b4162 70%);
-}
+} */
 .Moon__Top__Container{
     background-color: #000;
     flex-basis: 150px;
@@ -1216,7 +1216,7 @@ body {
     width: 300px;
     height: 454px;
   }
-  .card_No_dim{
+  .Flip__Card__Container{
     overflow: hidden;
         /* width: 300px;
         height: 454px; */
@@ -1243,16 +1243,14 @@ body {
     border: 1px solid #0000003e;
   }
   
-  .content {
+  .Flip__Card__Content {
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
     transition: transform 300ms;
-    box-shadow: 0px 0px 10px 1px #000000ee;
-    border-radius: 5px;
   }
   
-  .front, .back {
+  .Front__Face, .Back__Face {
     background-color: #151515;
     /* position: absolute; */
     width: 100%;
@@ -1263,7 +1261,7 @@ body {
     overflow: hidden;
   }
   
-  .back {
+  .Back__Face {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -1273,7 +1271,7 @@ body {
     overflow: hidden;
   }
   
-  .back::before {
+  .Back__Face::before {
     position: absolute;
     content: ' ';
     display: block;
@@ -1283,7 +1281,7 @@ body {
     animation: rotation_481 5000ms infinite linear;
   }
   
-  .back-content {
+  .Back__Face-content {
     position: absolute;
     width: 99%;
     height: 99%;
@@ -1297,13 +1295,13 @@ body {
     gap: 30px;
   }
   
-  /* .card:hover .content {
+  /* .card:hover .Flip__Card__Content {
     transform: rotateY(180deg) !important;
   }
-  .card_No_dim:hover .content{
+  .Flip__Card__Container:hover .Flip__Card__Content{
     transform: rotateY(180deg) !important;
   }
-  .Fancy__Animated__Card:hover .content {
+  .Fancy__Animated__Card:hover .Flip__Card__Content {
     transform: rotateY(180deg) !important;
   } */
 
@@ -1324,12 +1322,12 @@ body {
     }
   }
   
-  .front {
+  .Front__Face {
     transform: rotateY(180deg);
     color: white;
   }
   
-  .front .front-content {
+  .Front__Face .Front__Face-content {
     /* position: absolute; */
     width: 100%;
     height: 100%;
@@ -1341,7 +1339,7 @@ body {
     /* justify-content: space-between; */
   }
   
-  .front-content .badge {
+  .Front__Face-content .badge {
     background-color: #00000055;
     padding: 2px 10px;
     border-radius: 10px;
@@ -1375,7 +1373,7 @@ body {
     font-size: 8px;
   }
   
-  .front .img {
+  .Front__Face .img {
     position: absolute;
     width: 100%;
     height: 100%;

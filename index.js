@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
-    let fancyCard = document.querySelectorAll('.content')
+    let fancyCard = document.querySelectorAll('.Flip__Card__Content')
     let isflipped = false
     fancyCard.forEach((el) => {
         el.addEventListener('click', () => {

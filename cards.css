@@ -1,6 +1,11 @@
 :root{
     --border_radius: 8px;
     --box-shadow: rgba(0, 0, 0, 0.35) 10px 10px 20px;
+    --path_box_1: polygon(0% 0%, 100% 0%, 100% 70%, 0% 100%);
+    --path_box_2: polygon(0% 70%, 100% 0%, 100% 100%, 0% 100%);
+    --path_cliped_moon_heading: polygon(0% 100%, 100% 100%, 100% 0%);
+    --path_cliped_moon_body:  polygon(0% 0%, 100% 0%, 0% 10%);
+    --moon_size: 100px;
 }
 
 .Image__Card__Container{
@@ -16,20 +21,114 @@
     padding: 10px;
 }
 
-.card_No_dim{
+.Flip__Card__Container{
     border-radius: var(--border_radius);
 }
+.Flip__Card__Heading{
+    font-size: 10px;
+    font-weight: 700;
+    color: white;
+}
+.Flip__Card__SubHeading{
+    font-size: 10px;
+    font-weight: 600;
+}
+.Bullet__Point__Circle{
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 9999px;
+}
+.Flip__Card__Points__Font_Size{
+    font-size: 9px;
+}
+.Flip__Card_img_1_move{
+    animation: icons-animation 1000ms alternate infinite ease-in-out;
+}
+.Flip__Card_img_2_move{
+    animation: icons-animation2 1000ms alternate infinite ease-in-out;
+}
+@keyframes icons-animation {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
+@keyframes icons-animation2 {
+    0%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.Flip__Card__Img{
+    height: 100px;
+    /* width: 70px; */
+}
 
-.New__Card__No_Dimension{
+.Moon__Card__Container{
     border-radius: var(--border_radius);
     box-shadow: var(--box-shadow);
+    position: relative;
+    display: flex;
+    /* height: 100%; */
+    background-image: linear-gradient(315deg, #aaaa44 0%, #2b4162 70%);
 }
-
-.clipped-text2{
-    /* font-size: 0.05em !important; */
+.Moon__Card__Heading__Wrapper{
+    width: 100%;
+    height: 150px;
+    background: #000;
+    text-align: justify;
+    color: white;
+    clip-path: var(--path_box_1);
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    border-radius: 8px 8px 0 0;
+}
+.Moon__Card__Heading__Wrapper div{
+    padding: 5px;
+    font-size: 16px;
+}
+/* This is imaginary container which is used to shape/push the text in specific angle */
+.Moon__Heading__Clipper {
+    shape-outside: var(--path_cliped_moon_heading);
+    clip-path:     var(--path_cliped_moon_heading);
+}
+.Moon__Body__Clipper { 
+    float:left;
+    width: 100%;
+    height: 100%;
+    shape-outside: polygon(0% 0%, 100% 0%, 0% 70%);
+    clip-path:     var(--path_cliped_moon_body);
+}
+.Moon__Card__Body__Txt{
+    font-size: 13px;
     padding: 0 4px 15px 4px;
 }
-
+.Moon {
+    width: var(--moon_size);
+    height: var(--moon_size);
+    border-radius: 50%;
+    background: var(--moon-color);
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+.Moon__Card__Body__Wrapper{
+    height: 100%;
+    background: #000;
+    text-align: justify;
+    color: white;
+    clip-path: var(--path_box_2);
+    border-radius: 8px;
+    padding: 8px 4px;
+}
 
 
 .Image__Card__Container:hover{
@@ -44,9 +143,13 @@
 }
 
 @media screen and (max-width: 500px) {
-    .circleInCard{
-        width: 20px;
-        height: 20px;
+    .Moon{
+        width: 60px;
+        height: 60px;
+        top: 50%;
+        left: 20%;
     }
-    
+    .Moon__Card__Body__Txt{
+        font-size: 10px;
+    }
 }
