@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./cards.css">
     <link rel="stylesheet" href="./serviceanim.css">
-    <link rel="stylesheet" href="dist/timeline.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
     <title>Small Planet</title>
 </head>
@@ -1567,7 +1565,6 @@
         </div> -->
 
 
-
         <!-- CARDS SECTION ROW -->
 
         <div class="row p-1 m-0 p-md-0 gap-3 justify-content-center ">
@@ -1659,7 +1656,7 @@
                 </div>
                 <div class="circleInCard"></div>
                 <div class="box2__No__Dimension">
-                    <img class="clipped-image2" src="https://homepages.cae.wisc.edu/~ece533/images/arctichare.png" />
+                    <img class="clipped-image2" src=""/>
                     <p class="clipped-text2 m-0 someclassss">
                         Small Planet Solutions Pvt. Ltd. was established in the Year 2000 to provide specialized E-commerce and Software Engineering Services for the Internet and the Intranets. Since inception, Small Planet has provided various types of solutions to various types of businesses and organizations of various sizes.
                     </p>
@@ -1688,7 +1685,7 @@
                 </div>
                 <div class="circleInCard"></div>
                 <div class="box2__No__Dimension">
-                    <img class="clipped-image2" src="https://homepages.cae.wisc.edu/~ece533/images/arctichare.png" />
+                    <p class="clipped-image2" src="https://homepages.cae.wisc.edu/~ece533/images/arctichare.png"></p>
                     <p class="clipped-text2 m-0 someclassss">
                         Small Planet Solutions Pvt. Ltd. was established in the Year 2000 to provide specialized E-commerce and Software Engineering Services for the Internet and the Intranets. Since inception, Small Planet has provided various types of solutions to various types of businesses and organizations of various sizes.
                     </p>
@@ -2010,8 +2007,10 @@ let tabContentTemplate = (id) => {
 }
 let id;
 let ids = []
+let modalid = ''
 const generateId = () => {
     id = "#nav" + Math.floor(Math.random() * 1000);
+    modalid = Math.floor(Math.random() * 1000)
     ids.push(id)
 } 
 function addTab(){
@@ -2068,100 +2067,163 @@ function removeTab(id){
 
 
 
-
-
-
         var modalorigins={};
         var modal = document.getElementById("myModal");
         var modalContent = document.getElementById("modal-content");
-        modalContent.addEventListener('click', (e) => {
-            e.stopPropagation()
-        })
+        modalContent.addEventListener('click', (e) => {e.stopPropagation()})
         
 
         // Get the button that opens the modal
         var btn = document.getElementById("openModalBtn");
         var btn2 = document.getElementById("openModalBtn2");
+        function getOffset(el) {
+            const rect = el.getBoundingClientRect();
+            return {
+                left: rect.left + window.scrollX,
+                top: rect.top + window.scrollY
+            };
+        }
 
         // When the user clicks the button, open the modal
-        var x
-        var y
+        var x = 0;
+        var y = 0;
+        var modalParentX = 0;
+        var modalParentY = 0;
+
+        let modalCoord = []
+        function ModalId(){
+            return Math.floor(Math.random() * 1000)
+        }
+        
         btn.onclick = function(event) {
             x = event.clientX
             y = event.clientY
-            // eval('modalorigins.'+modal.id+'="'+x+','+y+'");');
+            modalParentX = event.screenX
+            modalParentY = event.screenY
+
+            modalCoord.push({id: ModalId(), x: event.screenX, y: event.screenY})
+            
+            console.log('btn', event)
 
             modal.style.display = "block";
             modalContent.style.display = "block"; 
             modalContent.style.animation = 'modalAnim 0.35s'
 
-            modalContent.style.top = y + "px";
-            modalContent.style.left = x + "px";
+            modalContent.style.top = y  + "px";
+            modalContent.style.left = modalParentX + "px";
             modalContent.style.transform = "translate(-50%, -50%)";
             modalContent.style.animationFillMode = 'forwards';
-            // modalContent.style.width = '60%';
-            // modalContent.style.height = '60%';
+            
             document.getElementById('Modal__inner__Content').style.display = 'block';
             span.style.display = 'block';
+            // document.body.style.overflow = 'hidden'
         }
         btn2.onclick = function(event) {
+            x=0
+            y=0
+            modalParentX=0
+            modalParentY=0
             x = event.clientX
             y = event.clientY
+            modalParentX = event.screenX
+            modalParentY = event.screenY
             // eval('modalorigins.'+modal.id+'="'+x+','+y+'");');
 
             modal.style.display = "block";
             modalContent.style.display = "block"; 
             modalContent.style.animation = 'modalAnim 0.35s'
 
-            modalContent.style.top = y + "px";
-            modalContent.style.left = x + "px";
+            modalContent.style.top = modalParentY  + "px";
+            modalContent.style.left = modalParentX + "px";
             modalContent.style.transform = "translate(-50%, -50%)";
             modalContent.style.animationFillMode = 'forwards';
             // modalContent.style.width = '60%';
             // modalContent.style.height = '60%';
             document.getElementById('Modal__inner__Content').style.display = 'block';
             span.style.display = 'block';
+            // document.body.style.overflow = 'hidden'
 
         }
+        
+        var element = document.getElementById('openModalBtn');
+        
+        let rect = btn.getBoundingClientRect()
+        window.addEventListener('scroll', () => {
+            var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            var elementPosition = {
+                top: rect.top + scrollTop,
+                left: rect.left + scrollLeft
+            };
+            console.log('eleposition', elementPosition)
+            console.log(' btnrect.top', rect.top - scrollTop)
+            modalParentY = rect.top + scrollTop
+        })
+       
+        
+        function addKeyframeValues(animationName, values) {
+            var styleSheet = document.styleSheets[0];
+            var keyframes = '@keyframes ' + animationName + ' {';
+            for (var key in values) {
+                keyframes += key + ' {' + values[key] + '}';
+            }
+            keyframes += '}';
+            styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
+        }
 
-        // Get the <span> element that closes the modal
+        var values = {
+            '0%': `opacity: 1; left: 100px`,
+            '50%': `opacity: 0.8; background: #000;left: 100px`,
+            '100%': `opacity: 0.5; width: 0; height: 0; background: green;`
+        };
         var span = document.getElementsByClassName("close")[0];
         span.onclick = function(e) {
             e.stopPropagation()
-            console.log('e', e)
-            modalContent.style.animation = 'modalAnimEnd 0.4s';
-            // modalContent.style.transition = 'ease-in-out 0.4s !important';
-            modalContent.style.top = y + "px !important";
-            modalContent.style.left = x + "px";
-            modalContent.style.transform = "translate(-50%, -50%)";
-            // modalContent.style.width = "0px";
+            modalContent.style.transform = `translate(100px, ${modalParentY}px)`
+            addKeyframeValues('newmod', values)
+            modalContent.style.animation = 'newmod 10s';
+            setTimeout(() => {
+                // modalContent.style.animation = 'modalAnimEnd 0.4s';
+                span.style.display = 'none';
+                document.getElementById('Modal__inner__Content').style.display = 'none';
+            }, 1000);
 
-            span.style.display = 'none';
-            document.getElementById('Modal__inner__Content').style.display = 'none';
 
+            // document.body.style.overflow = 'auto'
             setTimeout(() => {
                 modal.style.display = "none";
                 modalContent.style.display = "none";
-            }, 220);
+            }, 10030);
+
         }
 
-        modal.onclick = function(e){
-            e.stopPropagation()
+        // modal.onclick = function(e){
+        //     e.stopPropagation()
+        //     x=0
+        //     y=0
+        //     modalParentX=0
+        //     modalParentY=0
 
-            modalContent.style.animation = 'modalAnimEnd 0.4s';
-            // modalContent.style.transition = 'ease-in-out 0.4s !important';
-            modalContent.style.top = y + "px !important";
-            modalContent.style.left = x + "px";
-            modalContent.style.transform = "translate(-50%, -50%)";
-            modalContent.style.width = "0px";
-            span.style.display = 'none';
-            document.getElementById('Modal__inner__Content').style.display = 'none';
+        //     modalContent.style.animation = 'modalAnimEnd 0.4s';
+        //     // modalContent.style.transition = 'ease-in-out 0.4s !important';
+        //     // modalContent.style.top = modalParentY + "px !important";
+        //     // modalContent.style.left = modalParentX + "px !important";
+            
 
-            setTimeout(() => {
-                modal.style.display = "none";
-                modalContent.style.display = "none";
-            }, 220);
-        }
+        //     modalContent.style.top = modalParentY + "px !important";
+        //     modalContent.style.left = modalParentX + "px !important";
+
+        //     modalContent.style.transform = "translate(-50%, -50%)";
+        //     modalContent.style.width = "0px";
+        //     span.style.display = 'none';
+        //     document.getElementById('Modal__inner__Content').style.display = 'none';
+        //     // document.body.style.overflow = 'auto'
+
+        //     setTimeout(() => {
+        //         modal.style.display = "none";
+        //         modalContent.style.display = "none";
+        //     }, 220);
+        // }
 
         window.addEventListener('resize', () => {
             const navbarLinks = document.querySelectorAll('NavBar__Link')
